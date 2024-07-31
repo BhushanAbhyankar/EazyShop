@@ -1,0 +1,2 @@
+# EazyShop
+E-Commerce app
