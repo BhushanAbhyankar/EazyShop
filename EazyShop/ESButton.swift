@@ -1,5 +1,5 @@
 //
-//  ESButtonStyle.swift
+//  ESButton.swift
 //  EazyShop
 //
 //  Created by Cesar Rojas on 7/31/24.
@@ -35,7 +35,7 @@ public struct ESButton<T: View>: View {
     
     private func buttonAction() {
         action()
-        debugPrint("---- \(self)")
+        //debugPrint("---- \(self)")
     }
 }
 
