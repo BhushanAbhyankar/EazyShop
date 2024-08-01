@@ -61,7 +61,7 @@ struct ForgotPasswordPage: View {
             .padding(.bottom, 39)
             
             // Sign Up Button
-            ESButton("LOGIN") {
+            ESButton("SEND") {
                 
             }
             .buttonStyle(FilledStyle())
