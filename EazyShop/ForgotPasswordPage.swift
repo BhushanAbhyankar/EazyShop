@@ -8,61 +8,53 @@
 import SwiftUI
 
 struct ForgotPasswordPage: View {
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var isValidEmail: Bool = true
+    @StateObject private var viewModel = LoginViewModel()
+    
+    @Binding var path: [NavigationDestination]
     
     var body: some View {
         VStack(spacing: 16) {
             // Title
-            Text("Forgot password")
-                .font(.custom("Metropolis-ExtraBold", size: 34)).bold()
-                .bold()
+            Text(Constants.Titles.forgotPassword)
+                .fontMetropolis(fontSize: 34, fontWeight: .bold, fontColor: Constants.Colors.black)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.bottom, 53)
             
-            
             HStack {
-                
-                Text("Please, enter your email address. You will receive a link to create a new password via email.")
-                    .font(.custom("Metropolis-Regular", size: 14))
-                    .foregroundColor(.black)
+                Text(Constants.Text.newPassword)
+                    .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Constants.Colors.black)
                 Spacer()
             }
             
-            
             VStack {
                 VStack(alignment: .leading) {
-                    Text("Email")
-                        .font(.custom("Metropolis-Regular", size: 11))
-                        .foregroundColor(.gray)
+                    Text(Constants.Text.email)
+                        .fontMetropolis(fontSize: 11, fontWeight: .regular, fontColor: Constants.Colors.lightGray)
                         .padding(.leading, 10)
                     HStack {
                         // Email Field
-                        TextField("", text: $email)
-                            .onChange(of: email) { newValue in
-                                isValidEmail = newValue.isValidEmail()
-                        }
-                            .font(.custom("Metropolis-Regular", size: 14))
+                        TextField("", text: $viewModel.email)
+                            .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Constants.Colors.blackTextField)
                             .padding(.leading, 10)
                     }
                 }
                 .frame(height: 64)
-                .overlay(RoundedRectangle(cornerRadius: 0).stroke(isValidEmail ? Color(.systemGray4) : Color(hex: "F01F0E"), lineWidth: 2))
+                .background(Color.white)
+                .cornerRadius(4)
+                .shadow(color: Color.gray.opacity(0.5), radius: 2, x: 0, y: 0)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 4)
+                        .stroke(viewModel.overlayColor, lineWidth: 1)
+                )
                 
-                if !isValidEmail {
-                    Text("Not a valid email address. Should be your\u{200B}@email.com")
-                        .font(.custom("Metropolis-Regular", size: 11))
-                        .foregroundColor(Color(hex: "F01F0E"))
-                        .textSelection(.disabled)
-                }
+                viewModel.errorText
                 
             }
             .padding(.bottom, 39)
             
             // Sign Up Button
-            ESButton("SEND") {
-                
+            ESButton(Constants.Buttons.send) {
+                path.removeAll()
             }
             .buttonStyle(FilledStyle())
             
@@ -71,10 +63,10 @@ struct ForgotPasswordPage: View {
         }
         .padding()
         .padding(.top, 18)
-        .background(Color(hex: "F9F9F9"))
+        .background(Constants.Colors.backgroundLightGray)
     }
 }
 
 #Preview {
-    ForgotPasswordPage()
+    ForgotPasswordPage(path: .constant([]))
 }
