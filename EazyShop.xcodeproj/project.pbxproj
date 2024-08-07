@@ -29,7 +29,7 @@
 		02ECEA8C2C5AE9BF00B62A2A /* Metropolis-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA782C5AE9BF00B62A2A /* Metropolis-Thin.otf */; };
 		02ECEA8D2C5AE9BF00B62A2A /* Metropolis-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA792C5AE9BF00B62A2A /* Metropolis-ThinItalic.otf */; };
 		02ECEA8E2C5AE9BF00B62A2A /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA7A2C5AE9BF00B62A2A /* SIL Open Font License.txt */; };
-		02ECEA912C5AF9D900B62A2A /* BaseButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA902C5AF9D900B62A2A /* BaseButtonStyle.swift */; };
+		02ECEA912C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA902C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift */; };
 		02ECEA932C5AFDCD00B62A2A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA922C5AFDCD00B62A2A /* Utils.swift */; };
 		02ECEA952C5AFEB700B62A2A /* ESButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA942C5AFEB700B62A2A /* ESButton.swift */; };
 		02ECEA972C5B094700B62A2A /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA962C5B094700B62A2A /* LoginPage.swift */; };
@@ -86,7 +86,7 @@
 		02ECEA792C5AE9BF00B62A2A /* Metropolis-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ThinItalic.otf"; sourceTree = "<group>"; };
 		02ECEA7A2C5AE9BF00B62A2A /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
 		02ECEA8F2C5AE9FF00B62A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		02ECEA902C5AF9D900B62A2A /* BaseButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButtonStyle.swift; sourceTree = "<group>"; };
+		02ECEA902C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButtonAndTextStyle.swift; sourceTree = "<group>"; };
 		02ECEA922C5AFDCD00B62A2A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		02ECEA942C5AFEB700B62A2A /* ESButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESButton.swift; sourceTree = "<group>"; };
 		02ECEA962C5B094700B62A2A /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 				02ECEA9A2C5B73EB00B62A2A /* ForgotPasswordPage.swift */,
 				8BD311A42C5ACBF30013A159 /* Item.swift */,
 				02ECEA942C5AFEB700B62A2A /* ESButton.swift */,
-				02ECEA902C5AF9D900B62A2A /* BaseButtonStyle.swift */,
+				02ECEA902C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift */,
 				02ECEA922C5AFDCD00B62A2A /* Utils.swift */,
 				8BD311A62C5ACBFD0013A159 /* Assets.xcassets */,
 				8BD311A82C5ACBFD0013A159 /* Preview Content */,
@@ -398,7 +398,7 @@
 				02ECEA642C5AE82A00B62A2A /* SignUpPage.swift in Sources */,
 				02ECEA992C5B13BA00B62A2A /* ESNav.swift in Sources */,
 				0262DF3D2C618ED600689E1A /* LoginViewModel.swift in Sources */,
-				02ECEA912C5AF9D900B62A2A /* BaseButtonStyle.swift in Sources */,
+				02ECEA912C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift in Sources */,
 				8BD311A12C5ACBF30013A159 /* EazyShopApp.swift in Sources */,
 				02ECEA932C5AFDCD00B62A2A /* Utils.swift in Sources */,
 			);

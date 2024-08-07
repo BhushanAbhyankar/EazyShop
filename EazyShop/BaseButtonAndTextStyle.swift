@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// BaseButton Style
-struct BaseButtonStyle: ButtonStyle {
+struct BaseButtonAndTextStyle: ButtonStyle {
     let backgroundColor: Color
     let textColor: Color
     let overlayColor: Color
@@ -34,7 +34,7 @@ struct BaseButtonStyle: ButtonStyle {
 /// Custom Button Style for Filled Style
 struct FilledStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
-        BaseButtonStyle(backgroundColor: Constants.Colors.red,
+        BaseButtonAndTextStyle(backgroundColor: Constants.Colors.red,
                         textColor: Constants.Colors.white,
                         overlayColor: Constants.Colors.red)
         .makeBody(configuration: configuration)
@@ -44,7 +44,7 @@ struct FilledStyle: ButtonStyle {
 /// Custom Button Style for Outline Style
 struct OutlineStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
-        BaseButtonStyle(backgroundColor: Constants.Colors.clear,
+        BaseButtonAndTextStyle(backgroundColor: Constants.Colors.clear,
                         textColor: Constants.Colors.black,
                         overlayColor: Constants.Colors.black)
         .makeBody(configuration: configuration)
