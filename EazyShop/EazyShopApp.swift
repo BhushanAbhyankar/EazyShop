@@ -25,7 +25,7 @@ struct EazyShopApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ESNav()
         }
         .modelContainer(sharedModelContainer)
     }
