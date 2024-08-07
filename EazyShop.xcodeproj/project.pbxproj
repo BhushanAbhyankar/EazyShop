@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0262DF3A2C61595600689E1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0262DF392C61595600689E1A /* Constants.swift */; };
+		0262DF3D2C618ED600689E1A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0262DF3C2C618ED500689E1A /* LoginViewModel.swift */; };
 		02ECEA642C5AE82A00B62A2A /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA632C5AE82A00B62A2A /* SignUpPage.swift */; };
 		02ECEA7C2C5AE9BF00B62A2A /* Metropolis-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA682C5AE9BF00B62A2A /* Metropolis-Black.otf */; };
 		02ECEA7D2C5AE9BF00B62A2A /* Metropolis-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA692C5AE9BF00B62A2A /* Metropolis-BlackItalic.otf */; };
@@ -61,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0262DF392C61595600689E1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0262DF3C2C618ED500689E1A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		02ECEA632C5AE82A00B62A2A /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
 		02ECEA682C5AE9BF00B62A2A /* Metropolis-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Black.otf"; sourceTree = "<group>"; };
 		02ECEA692C5AE9BF00B62A2A /* Metropolis-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-BlackItalic.otf"; sourceTree = "<group>"; };
@@ -126,6 +130,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0262DF3B2C618E9E00689E1A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0262DF3C2C618ED500689E1A /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		02ECEA672C5AE9A100B62A2A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,8 +197,10 @@
 			children = (
 				02ECEA8F2C5AE9FF00B62A2A /* Info.plist */,
 				02ECEA672C5AE9A100B62A2A /* Utilities */,
+				0262DF3B2C618E9E00689E1A /* ViewModel */,
 				8BD311A02C5ACBF30013A159 /* EazyShopApp.swift */,
 				8BD311A22C5ACBF30013A159 /* ContentView.swift */,
+				0262DF392C61595600689E1A /* Constants.swift */,
 				02ECEA982C5B13BA00B62A2A /* ESNav.swift */,
 				02ECEA632C5AE82A00B62A2A /* SignUpPage.swift */,
 				02ECEA962C5B094700B62A2A /* LoginPage.swift */,
@@ -376,12 +390,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				02ECEA9B2C5B73EB00B62A2A /* ForgotPasswordPage.swift in Sources */,
+				0262DF3A2C61595600689E1A /* Constants.swift in Sources */,
 				02ECEA972C5B094700B62A2A /* LoginPage.swift in Sources */,
 				02ECEA952C5AFEB700B62A2A /* ESButton.swift in Sources */,
 				8BD311A32C5ACBF30013A159 /* ContentView.swift in Sources */,
 				8BD311A52C5ACBF30013A159 /* Item.swift in Sources */,
 				02ECEA642C5AE82A00B62A2A /* SignUpPage.swift in Sources */,
 				02ECEA992C5B13BA00B62A2A /* ESNav.swift in Sources */,
+				0262DF3D2C618ED600689E1A /* LoginViewModel.swift in Sources */,
 				02ECEA912C5AF9D900B62A2A /* BaseButtonStyle.swift in Sources */,
 				8BD311A12C5ACBF30013A159 /* EazyShopApp.swift in Sources */,
 				02ECEA932C5AFDCD00B62A2A /* Utils.swift in Sources */,
