@@ -36,6 +36,8 @@ struct ForgotPasswordPage: View {
                         TextField("", text: $viewModel.email)
                             .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Constants.Colors.blackTextField)
                             .padding(.leading, 10)
+                            .autocapitalization(.none) // Deactivate automatic capitalized
+                            .keyboardType(.emailAddress) // Keyboard for mail address
                     }
                 }
                 .frame(height: 64)
@@ -52,9 +54,25 @@ struct ForgotPasswordPage: View {
             }
             .padding(.bottom, 39)
             
+            if let errorMessage = viewModel.errorMessage {
+                Text(errorMessage)
+                    .foregroundColor(.red)
+                    .padding()
+            }
+            
             // Sign Up Button
             ESButton(Constants.Buttons.send) {
-                path.removeAll()
+                viewModel.resetPassword { result in
+                    switch result {
+                    case .success:
+                        // Acciones si el enlace fue enviado exitosamente
+                        print("Reset password mail sent") // Depuración
+                        //path.removeAll() // Navegar a la pantalla principal
+                    case .failure(let error):
+                        // Manejar el error si es necesario
+                        print("Error: \(error.localizedDescription)")
+                    }
+                }
             }
             .buttonStyle(FilledStyle())
             
