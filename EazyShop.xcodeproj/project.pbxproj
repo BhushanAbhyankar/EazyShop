@@ -7,6 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0262DF3A2C61595600689E1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0262DF392C61595600689E1A /* Constants.swift */; };
+		0262DF3D2C618ED600689E1A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0262DF3C2C618ED500689E1A /* LoginViewModel.swift */; };
+		02ECEA642C5AE82A00B62A2A /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA632C5AE82A00B62A2A /* SignUpPage.swift */; };
+		02ECEA7C2C5AE9BF00B62A2A /* Metropolis-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA682C5AE9BF00B62A2A /* Metropolis-Black.otf */; };
+		02ECEA7D2C5AE9BF00B62A2A /* Metropolis-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA692C5AE9BF00B62A2A /* Metropolis-BlackItalic.otf */; };
+		02ECEA7E2C5AE9BF00B62A2A /* Metropolis-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA6A2C5AE9BF00B62A2A /* Metropolis-Bold.otf */; };
+		02ECEA7F2C5AE9BF00B62A2A /* Metropolis-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA6B2C5AE9BF00B62A2A /* Metropolis-BoldItalic.otf */; };
+		02ECEA802C5AE9BF00B62A2A /* Metropolis-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA6C2C5AE9BF00B62A2A /* Metropolis-ExtraBold.otf */; };
+		02ECEA812C5AE9BF00B62A2A /* Metropolis-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA6D2C5AE9BF00B62A2A /* Metropolis-ExtraBoldItalic.otf */; };
+		02ECEA822C5AE9BF00B62A2A /* Metropolis-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA6E2C5AE9BF00B62A2A /* Metropolis-ExtraLight.otf */; };
+		02ECEA832C5AE9BF00B62A2A /* Metropolis-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA6F2C5AE9BF00B62A2A /* Metropolis-ExtraLightItalic.otf */; };
+		02ECEA842C5AE9BF00B62A2A /* Metropolis-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA702C5AE9BF00B62A2A /* Metropolis-Light.otf */; };
+		02ECEA852C5AE9BF00B62A2A /* Metropolis-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA712C5AE9BF00B62A2A /* Metropolis-LightItalic.otf */; };
+		02ECEA862C5AE9BF00B62A2A /* Metropolis-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA722C5AE9BF00B62A2A /* Metropolis-Medium.otf */; };
+		02ECEA872C5AE9BF00B62A2A /* Metropolis-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA732C5AE9BF00B62A2A /* Metropolis-MediumItalic.otf */; };
+		02ECEA882C5AE9BF00B62A2A /* Metropolis-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA742C5AE9BF00B62A2A /* Metropolis-Regular.otf */; };
+		02ECEA892C5AE9BF00B62A2A /* Metropolis-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA752C5AE9BF00B62A2A /* Metropolis-RegularItalic.otf */; };
+		02ECEA8A2C5AE9BF00B62A2A /* Metropolis-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA762C5AE9BF00B62A2A /* Metropolis-SemiBold.otf */; };
+		02ECEA8B2C5AE9BF00B62A2A /* Metropolis-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA772C5AE9BF00B62A2A /* Metropolis-SemiBoldItalic.otf */; };
+		02ECEA8C2C5AE9BF00B62A2A /* Metropolis-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA782C5AE9BF00B62A2A /* Metropolis-Thin.otf */; };
+		02ECEA8D2C5AE9BF00B62A2A /* Metropolis-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA792C5AE9BF00B62A2A /* Metropolis-ThinItalic.otf */; };
+		02ECEA8E2C5AE9BF00B62A2A /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA7A2C5AE9BF00B62A2A /* SIL Open Font License.txt */; };
+		02ECEA912C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA902C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift */; };
+		02ECEA932C5AFDCD00B62A2A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA922C5AFDCD00B62A2A /* Utils.swift */; };
+		02ECEA952C5AFEB700B62A2A /* ESButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA942C5AFEB700B62A2A /* ESButton.swift */; };
+		02ECEA972C5B094700B62A2A /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA962C5B094700B62A2A /* LoginPage.swift */; };
+		02ECEA992C5B13BA00B62A2A /* ESNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA982C5B13BA00B62A2A /* ESNav.swift */; };
+		02ECEA9B2C5B73EB00B62A2A /* ForgotPasswordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA9A2C5B73EB00B62A2A /* ForgotPasswordPage.swift */; };
 		8BD311A12C5ACBF30013A159 /* EazyShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311A02C5ACBF30013A159 /* EazyShopApp.swift */; };
 		8BD311A32C5ACBF30013A159 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311A22C5ACBF30013A159 /* ContentView.swift */; };
 		8BD311A52C5ACBF30013A159 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311A42C5ACBF30013A159 /* Item.swift */; };
@@ -35,6 +63,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0262DF392C61595600689E1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0262DF3C2C618ED500689E1A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		02ECEA632C5AE82A00B62A2A /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
+		02ECEA682C5AE9BF00B62A2A /* Metropolis-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Black.otf"; sourceTree = "<group>"; };
+		02ECEA692C5AE9BF00B62A2A /* Metropolis-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-BlackItalic.otf"; sourceTree = "<group>"; };
+		02ECEA6A2C5AE9BF00B62A2A /* Metropolis-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Bold.otf"; sourceTree = "<group>"; };
+		02ECEA6B2C5AE9BF00B62A2A /* Metropolis-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-BoldItalic.otf"; sourceTree = "<group>"; };
+		02ECEA6C2C5AE9BF00B62A2A /* Metropolis-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraBold.otf"; sourceTree = "<group>"; };
+		02ECEA6D2C5AE9BF00B62A2A /* Metropolis-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
+		02ECEA6E2C5AE9BF00B62A2A /* Metropolis-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraLight.otf"; sourceTree = "<group>"; };
+		02ECEA6F2C5AE9BF00B62A2A /* Metropolis-ExtraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraLightItalic.otf"; sourceTree = "<group>"; };
+		02ECEA702C5AE9BF00B62A2A /* Metropolis-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Light.otf"; sourceTree = "<group>"; };
+		02ECEA712C5AE9BF00B62A2A /* Metropolis-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-LightItalic.otf"; sourceTree = "<group>"; };
+		02ECEA722C5AE9BF00B62A2A /* Metropolis-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Medium.otf"; sourceTree = "<group>"; };
+		02ECEA732C5AE9BF00B62A2A /* Metropolis-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-MediumItalic.otf"; sourceTree = "<group>"; };
+		02ECEA742C5AE9BF00B62A2A /* Metropolis-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Regular.otf"; sourceTree = "<group>"; };
+		02ECEA752C5AE9BF00B62A2A /* Metropolis-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-RegularItalic.otf"; sourceTree = "<group>"; };
+		02ECEA762C5AE9BF00B62A2A /* Metropolis-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-SemiBold.otf"; sourceTree = "<group>"; };
+		02ECEA772C5AE9BF00B62A2A /* Metropolis-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-SemiBoldItalic.otf"; sourceTree = "<group>"; };
+		02ECEA782C5AE9BF00B62A2A /* Metropolis-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Thin.otf"; sourceTree = "<group>"; };
+		02ECEA792C5AE9BF00B62A2A /* Metropolis-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ThinItalic.otf"; sourceTree = "<group>"; };
+		02ECEA7A2C5AE9BF00B62A2A /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		02ECEA8F2C5AE9FF00B62A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		02ECEA902C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButtonAndTextStyle.swift; sourceTree = "<group>"; };
+		02ECEA922C5AFDCD00B62A2A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		02ECEA942C5AFEB700B62A2A /* ESButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESButton.swift; sourceTree = "<group>"; };
+		02ECEA962C5B094700B62A2A /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		02ECEA982C5B13BA00B62A2A /* ESNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESNav.swift; sourceTree = "<group>"; };
+		02ECEA9A2C5B73EB00B62A2A /* ForgotPasswordPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPage.swift; sourceTree = "<group>"; };
 		8BD3119D2C5ACBF30013A159 /* EazyShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EazyShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD311A02C5ACBF30013A159 /* EazyShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazyShopApp.swift; sourceTree = "<group>"; };
 		8BD311A22C5ACBF30013A159 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +130,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0262DF3B2C618E9E00689E1A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0262DF3C2C618ED500689E1A /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		02ECEA672C5AE9A100B62A2A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				02ECEA7B2C5AE9BF00B62A2A /* metropolis-font */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		02ECEA7B2C5AE9BF00B62A2A /* metropolis-font */ = {
+			isa = PBXGroup;
+			children = (
+				02ECEA682C5AE9BF00B62A2A /* Metropolis-Black.otf */,
+				02ECEA692C5AE9BF00B62A2A /* Metropolis-BlackItalic.otf */,
+				02ECEA6A2C5AE9BF00B62A2A /* Metropolis-Bold.otf */,
+				02ECEA6B2C5AE9BF00B62A2A /* Metropolis-BoldItalic.otf */,
+				02ECEA6C2C5AE9BF00B62A2A /* Metropolis-ExtraBold.otf */,
+				02ECEA6D2C5AE9BF00B62A2A /* Metropolis-ExtraBoldItalic.otf */,
+				02ECEA6E2C5AE9BF00B62A2A /* Metropolis-ExtraLight.otf */,
+				02ECEA6F2C5AE9BF00B62A2A /* Metropolis-ExtraLightItalic.otf */,
+				02ECEA702C5AE9BF00B62A2A /* Metropolis-Light.otf */,
+				02ECEA712C5AE9BF00B62A2A /* Metropolis-LightItalic.otf */,
+				02ECEA722C5AE9BF00B62A2A /* Metropolis-Medium.otf */,
+				02ECEA732C5AE9BF00B62A2A /* Metropolis-MediumItalic.otf */,
+				02ECEA742C5AE9BF00B62A2A /* Metropolis-Regular.otf */,
+				02ECEA752C5AE9BF00B62A2A /* Metropolis-RegularItalic.otf */,
+				02ECEA762C5AE9BF00B62A2A /* Metropolis-SemiBold.otf */,
+				02ECEA772C5AE9BF00B62A2A /* Metropolis-SemiBoldItalic.otf */,
+				02ECEA782C5AE9BF00B62A2A /* Metropolis-Thin.otf */,
+				02ECEA792C5AE9BF00B62A2A /* Metropolis-ThinItalic.otf */,
+				02ECEA7A2C5AE9BF00B62A2A /* SIL Open Font License.txt */,
+			);
+			path = "metropolis-font";
+			sourceTree = SOURCE_ROOT;
+		};
 		8BD311942C5ACBF30013A159 = {
 			isa = PBXGroup;
 			children = (
@@ -96,9 +195,20 @@
 		8BD3119F2C5ACBF30013A159 /* EazyShop */ = {
 			isa = PBXGroup;
 			children = (
+				02ECEA8F2C5AE9FF00B62A2A /* Info.plist */,
+				02ECEA672C5AE9A100B62A2A /* Utilities */,
+				0262DF3B2C618E9E00689E1A /* ViewModel */,
 				8BD311A02C5ACBF30013A159 /* EazyShopApp.swift */,
 				8BD311A22C5ACBF30013A159 /* ContentView.swift */,
+				0262DF392C61595600689E1A /* Constants.swift */,
+				02ECEA982C5B13BA00B62A2A /* ESNav.swift */,
+				02ECEA632C5AE82A00B62A2A /* SignUpPage.swift */,
+				02ECEA962C5B094700B62A2A /* LoginPage.swift */,
+				02ECEA9A2C5B73EB00B62A2A /* ForgotPasswordPage.swift */,
 				8BD311A42C5ACBF30013A159 /* Item.swift */,
+				02ECEA942C5AFEB700B62A2A /* ESButton.swift */,
+				02ECEA902C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift */,
+				02ECEA922C5AFDCD00B62A2A /* Utils.swift */,
 				8BD311A62C5ACBFD0013A159 /* Assets.xcassets */,
 				8BD311A82C5ACBFD0013A159 /* Preview Content */,
 			);
@@ -234,8 +344,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02ECEA8E2C5AE9BF00B62A2A /* SIL Open Font License.txt in Resources */,
+				02ECEA8D2C5AE9BF00B62A2A /* Metropolis-ThinItalic.otf in Resources */,
+				02ECEA862C5AE9BF00B62A2A /* Metropolis-Medium.otf in Resources */,
+				02ECEA7E2C5AE9BF00B62A2A /* Metropolis-Bold.otf in Resources */,
+				02ECEA802C5AE9BF00B62A2A /* Metropolis-ExtraBold.otf in Resources */,
 				8BD311AA2C5ACBFD0013A159 /* Preview Assets.xcassets in Resources */,
+				02ECEA8B2C5AE9BF00B62A2A /* Metropolis-SemiBoldItalic.otf in Resources */,
+				02ECEA812C5AE9BF00B62A2A /* Metropolis-ExtraBoldItalic.otf in Resources */,
+				02ECEA882C5AE9BF00B62A2A /* Metropolis-Regular.otf in Resources */,
+				02ECEA892C5AE9BF00B62A2A /* Metropolis-RegularItalic.otf in Resources */,
+				02ECEA7F2C5AE9BF00B62A2A /* Metropolis-BoldItalic.otf in Resources */,
+				02ECEA872C5AE9BF00B62A2A /* Metropolis-MediumItalic.otf in Resources */,
+				02ECEA832C5AE9BF00B62A2A /* Metropolis-ExtraLightItalic.otf in Resources */,
 				8BD311A72C5ACBFD0013A159 /* Assets.xcassets in Resources */,
+				02ECEA822C5AE9BF00B62A2A /* Metropolis-ExtraLight.otf in Resources */,
+				02ECEA7C2C5AE9BF00B62A2A /* Metropolis-Black.otf in Resources */,
+				02ECEA8A2C5AE9BF00B62A2A /* Metropolis-SemiBold.otf in Resources */,
+				02ECEA7D2C5AE9BF00B62A2A /* Metropolis-BlackItalic.otf in Resources */,
+				02ECEA852C5AE9BF00B62A2A /* Metropolis-LightItalic.otf in Resources */,
+				02ECEA8C2C5AE9BF00B62A2A /* Metropolis-Thin.otf in Resources */,
+				02ECEA842C5AE9BF00B62A2A /* Metropolis-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +389,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02ECEA9B2C5B73EB00B62A2A /* ForgotPasswordPage.swift in Sources */,
+				0262DF3A2C61595600689E1A /* Constants.swift in Sources */,
+				02ECEA972C5B094700B62A2A /* LoginPage.swift in Sources */,
+				02ECEA952C5AFEB700B62A2A /* ESButton.swift in Sources */,
 				8BD311A32C5ACBF30013A159 /* ContentView.swift in Sources */,
 				8BD311A52C5ACBF30013A159 /* Item.swift in Sources */,
+				02ECEA642C5AE82A00B62A2A /* SignUpPage.swift in Sources */,
+				02ECEA992C5B13BA00B62A2A /* ESNav.swift in Sources */,
+				0262DF3D2C618ED600689E1A /* LoginViewModel.swift in Sources */,
+				02ECEA912C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift in Sources */,
 				8BD311A12C5ACBF30013A159 /* EazyShopApp.swift in Sources */,
+				02ECEA932C5AFDCD00B62A2A /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +566,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EazyShop/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EazyShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -456,6 +595,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EazyShop/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EazyShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
