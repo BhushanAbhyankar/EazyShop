@@ -88,6 +88,12 @@ extension TextField {
     }
 }
 
+extension SecureField {
+    func fontMetropolis(fontSize: CGFloat, fontWeight: Font.Weight, fontColor: Color) -> some View {
+        self.modifier(customMetropolisFont(fontSize: fontSize, fontWeight: fontWeight, fontColor: fontColor))
+    }
+}
+
 #Preview {
     VStack {
         ESButton("SIGN UP") {
