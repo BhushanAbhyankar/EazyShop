@@ -12,6 +12,7 @@ enum NavigationDestination: Hashable {
     case SignUpPage
     case LoginPage
     case ForgotPasswordPage
+    case HomeView
 }
 
 struct ESNav: View {
@@ -19,26 +20,32 @@ struct ESNav: View {
     @State var path: [NavigationDestination] = []
     
     var body: some View {
-        NavigationStack(path: $path) {
-            HStack {
-                Button(Constants.Buttons.login) {
-                    path.append(.SignUpPage)
+            NavigationStack(path: $path) {
+                ZStack {
+                    Constants.Colors.backgroundLightGray
+                        .edgesIgnoringSafeArea(.all)
+                HStack {
+                    Button(Constants.Buttons.login) {
+                        path.append(.SignUpPage)
+                    }
+                    .buttonStyle(OutlineStyle())
+                    
                 }
-                .buttonStyle(OutlineStyle())
-                
-            }
-//            .navigationDestination(isPresented: $navigateToSignUp) { SignUpPage() }
-            .padding()
-            .navigationDestination(for: NavigationDestination.self) { destination in
-                switch destination {
-                case .ESNav:
-                    ESNav()
-                case .SignUpPage:
-                    SignUpPage(path: $path)
-                case .LoginPage:
-                    LoginPage(path: $path)
-                case .ForgotPasswordPage:
-                    ForgotPasswordPage(path: $path)
+    //            .navigationDestination(isPresented: $navigateToSignUp) { SignUpPage() }
+                .padding()
+                .navigationDestination(for: NavigationDestination.self) { destination in
+                    switch destination {
+                    case .ESNav:
+                        ESNav()
+                    case .SignUpPage:
+                        SignUpPage(path: $path)
+                    case .LoginPage:
+                        LoginPage(path: $path)
+                    case .ForgotPasswordPage:
+                        ForgotPasswordPage(path: $path)
+                    case .HomeView:
+                        HomeView(path: $path)
+                    }
                 }
             }
         }
