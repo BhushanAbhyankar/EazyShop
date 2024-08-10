@@ -10,5 +10,25 @@
 		<string>Metropolis-Light.otf</string>
 		<string>Metropolis-Bold.otf</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb3845549079066540</string>
+				<string>com.googleusercontent.apps.745500274882-h70ko7vpamhs5kukp8bl62h608pamg05</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>3845549079066540</string>
+	<key>FacebookClientToken</key>
+	<string>b7e9e981684775bdd3723f766acf3c89</string>
+	<key>FacebookDisplayName</key>
+	<string>EazyShop</string>
+	<key>FacebookAutoLogAppEventsEnabled</key>
+	<true/>
+	<key>FacebookAdvertiserIDCollectionEnabled</key>
+	<true/>
 </dict>
 </plist>

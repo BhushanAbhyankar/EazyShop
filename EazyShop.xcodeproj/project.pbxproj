@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		022487862C66D1C500180539 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022487852C66D1C500180539 /* HomeView.swift */; };
 		0262DF3A2C61595600689E1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0262DF392C61595600689E1A /* Constants.swift */; };
 		0262DF3D2C618ED600689E1A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0262DF3C2C618ED500689E1A /* LoginViewModel.swift */; };
+		02C352302C65F90B0024AF14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3522F2C65F90B0024AF14 /* AppDelegate.swift */; };
+		02C352342C65FA8C0024AF14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02C352332C65FA8C0024AF14 /* GoogleService-Info.plist */; };
+		02C7CD9B2C632B45000560AA /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7CD9A2C632B45000560AA /* FirebaseService.swift */; };
 		02ECEA642C5AE82A00B62A2A /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA632C5AE82A00B62A2A /* SignUpPage.swift */; };
 		02ECEA7C2C5AE9BF00B62A2A /* Metropolis-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA682C5AE9BF00B62A2A /* Metropolis-Black.otf */; };
 		02ECEA7D2C5AE9BF00B62A2A /* Metropolis-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 02ECEA692C5AE9BF00B62A2A /* Metropolis-BlackItalic.otf */; };
@@ -35,6 +39,7 @@
 		02ECEA972C5B094700B62A2A /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA962C5B094700B62A2A /* LoginPage.swift */; };
 		02ECEA992C5B13BA00B62A2A /* ESNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA982C5B13BA00B62A2A /* ESNav.swift */; };
 		02ECEA9B2C5B73EB00B62A2A /* ForgotPasswordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECEA9A2C5B73EB00B62A2A /* ForgotPasswordPage.swift */; };
+		16E9D0E49D44242C05C75FBB /* Pods_EazyShop_EazyShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C528D551B92CDC2D1FB95A1 /* Pods_EazyShop_EazyShopUITests.framework */; };
 		8BD311A12C5ACBF30013A159 /* EazyShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311A02C5ACBF30013A159 /* EazyShopApp.swift */; };
 		8BD311A32C5ACBF30013A159 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311A22C5ACBF30013A159 /* ContentView.swift */; };
 		8BD311A52C5ACBF30013A159 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311A42C5ACBF30013A159 /* Item.swift */; };
@@ -43,6 +48,8 @@
 		8BD311B42C5ACBFF0013A159 /* EazyShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311B32C5ACBFF0013A159 /* EazyShopTests.swift */; };
 		8BD311BE2C5ACBFF0013A159 /* EazyShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311BD2C5ACBFF0013A159 /* EazyShopUITests.swift */; };
 		8BD311C02C5ACBFF0013A159 /* EazyShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311BF2C5ACBFF0013A159 /* EazyShopUITestsLaunchTests.swift */; };
+		97C0E68EF885C474E0D70D61 /* Pods_EazyShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8586A6771E1079CAAF85630 /* Pods_EazyShopTests.framework */; };
+		D39857B9BE1DCBBEBF387BC6 /* Pods_EazyShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8D6F4F48181A2469FF7B3A /* Pods_EazyShop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +70,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		022487842C66658B00180539 /* EazyShop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EazyShop.entitlements; sourceTree = "<group>"; };
+		022487852C66D1C500180539 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0262DF392C61595600689E1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0262DF3C2C618ED500689E1A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		02C3522F2C65F90B0024AF14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		02C352332C65FA8C0024AF14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		02C7CD9A2C632B45000560AA /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		02ECEA632C5AE82A00B62A2A /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
 		02ECEA682C5AE9BF00B62A2A /* Metropolis-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Black.otf"; sourceTree = "<group>"; };
 		02ECEA692C5AE9BF00B62A2A /* Metropolis-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-BlackItalic.otf"; sourceTree = "<group>"; };
@@ -92,6 +104,13 @@
 		02ECEA962C5B094700B62A2A /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		02ECEA982C5B13BA00B62A2A /* ESNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESNav.swift; sourceTree = "<group>"; };
 		02ECEA9A2C5B73EB00B62A2A /* ForgotPasswordPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPage.swift; sourceTree = "<group>"; };
+		1CE84C7DA16A390BC1E1F834 /* Pods-EazyShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EazyShopTests.debug.xcconfig"; path = "Target Support Files/Pods-EazyShopTests/Pods-EazyShopTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B2F8D4B371C707968D14619 /* Pods-EazyShop-EazyShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EazyShop-EazyShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-EazyShop-EazyShopUITests/Pods-EazyShop-EazyShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B50D06A84873177952F260C /* Pods-EazyShop-EazyShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EazyShop-EazyShopUITests.release.xcconfig"; path = "Target Support Files/Pods-EazyShop-EazyShopUITests/Pods-EazyShop-EazyShopUITests.release.xcconfig"; sourceTree = "<group>"; };
+		35122CC592220621F8BAEC4B /* Pods-EazyShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EazyShopTests.release.xcconfig"; path = "Target Support Files/Pods-EazyShopTests/Pods-EazyShopTests.release.xcconfig"; sourceTree = "<group>"; };
+		52A00575E983F1E6E61743BF /* Pods-EazyShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EazyShop.release.xcconfig"; path = "Target Support Files/Pods-EazyShop/Pods-EazyShop.release.xcconfig"; sourceTree = "<group>"; };
+		84A45E6A922DEEEBE1075616 /* Pods-EazyShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EazyShop.debug.xcconfig"; path = "Target Support Files/Pods-EazyShop/Pods-EazyShop.debug.xcconfig"; sourceTree = "<group>"; };
+		8A8D6F4F48181A2469FF7B3A /* Pods_EazyShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EazyShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD3119D2C5ACBF30013A159 /* EazyShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EazyShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD311A02C5ACBF30013A159 /* EazyShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazyShopApp.swift; sourceTree = "<group>"; };
 		8BD311A22C5ACBF30013A159 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +122,8 @@
 		8BD311B92C5ACBFF0013A159 /* EazyShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EazyShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD311BD2C5ACBFF0013A159 /* EazyShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazyShopUITests.swift; sourceTree = "<group>"; };
 		8BD311BF2C5ACBFF0013A159 /* EazyShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazyShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8C528D551B92CDC2D1FB95A1 /* Pods_EazyShop_EazyShopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EazyShop_EazyShopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8586A6771E1079CAAF85630 /* Pods_EazyShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EazyShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39857B9BE1DCBBEBF387BC6 /* Pods_EazyShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97C0E68EF885C474E0D70D61 /* Pods_EazyShopTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E9D0E49D44242C05C75FBB /* Pods_EazyShop_EazyShopUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				0262DF3C2C618ED500689E1A /* LoginViewModel.swift */,
+				02C7CD9A2C632B45000560AA /* FirebaseService.swift */,
+				02C3522F2C65F90B0024AF14 /* AppDelegate.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -172,6 +198,16 @@
 			path = "metropolis-font";
 			sourceTree = SOURCE_ROOT;
 		};
+		5E39265F4AAFC08886CA228D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A8D6F4F48181A2469FF7B3A /* Pods_EazyShop.framework */,
+				8C528D551B92CDC2D1FB95A1 /* Pods_EazyShop_EazyShopUITests.framework */,
+				C8586A6771E1079CAAF85630 /* Pods_EazyShopTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8BD311942C5ACBF30013A159 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +215,8 @@
 				8BD311B22C5ACBFF0013A159 /* EazyShopTests */,
 				8BD311BC2C5ACBFF0013A159 /* EazyShopUITests */,
 				8BD3119E2C5ACBF30013A159 /* Products */,
+				A4F57E0635F5548361787EF8 /* Pods */,
+				5E39265F4AAFC08886CA228D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +233,7 @@
 		8BD3119F2C5ACBF30013A159 /* EazyShop */ = {
 			isa = PBXGroup;
 			children = (
+				022487842C66658B00180539 /* EazyShop.entitlements */,
 				02ECEA8F2C5AE9FF00B62A2A /* Info.plist */,
 				02ECEA672C5AE9A100B62A2A /* Utilities */,
 				0262DF3B2C618E9E00689E1A /* ViewModel */,
@@ -205,10 +244,12 @@
 				02ECEA632C5AE82A00B62A2A /* SignUpPage.swift */,
 				02ECEA962C5B094700B62A2A /* LoginPage.swift */,
 				02ECEA9A2C5B73EB00B62A2A /* ForgotPasswordPage.swift */,
+				022487852C66D1C500180539 /* HomeView.swift */,
 				8BD311A42C5ACBF30013A159 /* Item.swift */,
 				02ECEA942C5AFEB700B62A2A /* ESButton.swift */,
 				02ECEA902C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift */,
 				02ECEA922C5AFDCD00B62A2A /* Utils.swift */,
+				02C352332C65FA8C0024AF14 /* GoogleService-Info.plist */,
 				8BD311A62C5ACBFD0013A159 /* Assets.xcassets */,
 				8BD311A82C5ACBFD0013A159 /* Preview Content */,
 			);
@@ -240,6 +281,19 @@
 			path = EazyShopUITests;
 			sourceTree = "<group>";
 		};
+		A4F57E0635F5548361787EF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84A45E6A922DEEEBE1075616 /* Pods-EazyShop.debug.xcconfig */,
+				52A00575E983F1E6E61743BF /* Pods-EazyShop.release.xcconfig */,
+				2B2F8D4B371C707968D14619 /* Pods-EazyShop-EazyShopUITests.debug.xcconfig */,
+				2B50D06A84873177952F260C /* Pods-EazyShop-EazyShopUITests.release.xcconfig */,
+				1CE84C7DA16A390BC1E1F834 /* Pods-EazyShopTests.debug.xcconfig */,
+				35122CC592220621F8BAEC4B /* Pods-EazyShopTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,9 +301,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BD311C32C5ACBFF0013A159 /* Build configuration list for PBXNativeTarget "EazyShop" */;
 			buildPhases = (
+				9B3AF2D3E502633686BFE7E0 /* [CP] Check Pods Manifest.lock */,
 				8BD311992C5ACBF30013A159 /* Sources */,
 				8BD3119A2C5ACBF30013A159 /* Frameworks */,
 				8BD3119B2C5ACBF30013A159 /* Resources */,
+				FB7B28841E18BECA2F73C2F6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,6 +320,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BD311C62C5ACBFF0013A159 /* Build configuration list for PBXNativeTarget "EazyShopTests" */;
 			buildPhases = (
+				EA22BAA0C3C18B07CE9F5141 /* [CP] Check Pods Manifest.lock */,
 				8BD311AB2C5ACBFF0013A159 /* Sources */,
 				8BD311AC2C5ACBFF0013A159 /* Frameworks */,
 				8BD311AD2C5ACBFF0013A159 /* Resources */,
@@ -282,9 +339,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BD311C92C5ACBFF0013A159 /* Build configuration list for PBXNativeTarget "EazyShopUITests" */;
 			buildPhases = (
+				282CF5DB86C44B1925A98463 /* [CP] Check Pods Manifest.lock */,
 				8BD311B52C5ACBFF0013A159 /* Sources */,
 				8BD311B62C5ACBFF0013A159 /* Frameworks */,
 				8BD311B72C5ACBFF0013A159 /* Resources */,
+				0F0F89B8B862364514626EB0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -363,6 +422,7 @@
 				02ECEA8A2C5AE9BF00B62A2A /* Metropolis-SemiBold.otf in Resources */,
 				02ECEA7D2C5AE9BF00B62A2A /* Metropolis-BlackItalic.otf in Resources */,
 				02ECEA852C5AE9BF00B62A2A /* Metropolis-LightItalic.otf in Resources */,
+				02C352342C65FA8C0024AF14 /* GoogleService-Info.plist in Resources */,
 				02ECEA8C2C5AE9BF00B62A2A /* Metropolis-Thin.otf in Resources */,
 				02ECEA842C5AE9BF00B62A2A /* Metropolis-Light.otf in Resources */,
 			);
@@ -384,6 +444,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F0F89B8B862364514626EB0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EazyShop-EazyShopUITests/Pods-EazyShop-EazyShopUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EazyShop-EazyShopUITests/Pods-EazyShop-EazyShopUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EazyShop-EazyShopUITests/Pods-EazyShop-EazyShopUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		282CF5DB86C44B1925A98463 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EazyShop-EazyShopUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B3AF2D3E502633686BFE7E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EazyShop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA22BAA0C3C18B07CE9F5141 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EazyShopTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB7B28841E18BECA2F73C2F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EazyShop/Pods-EazyShop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EazyShop/Pods-EazyShop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EazyShop/Pods-EazyShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8BD311992C5ACBF30013A159 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -392,10 +555,13 @@
 				02ECEA9B2C5B73EB00B62A2A /* ForgotPasswordPage.swift in Sources */,
 				0262DF3A2C61595600689E1A /* Constants.swift in Sources */,
 				02ECEA972C5B094700B62A2A /* LoginPage.swift in Sources */,
+				022487862C66D1C500180539 /* HomeView.swift in Sources */,
 				02ECEA952C5AFEB700B62A2A /* ESButton.swift in Sources */,
+				02C352302C65F90B0024AF14 /* AppDelegate.swift in Sources */,
 				8BD311A32C5ACBF30013A159 /* ContentView.swift in Sources */,
 				8BD311A52C5ACBF30013A159 /* Item.swift in Sources */,
 				02ECEA642C5AE82A00B62A2A /* SignUpPage.swift in Sources */,
+				02C7CD9B2C632B45000560AA /* FirebaseService.swift in Sources */,
 				02ECEA992C5B13BA00B62A2A /* ESNav.swift in Sources */,
 				0262DF3D2C618ED600689E1A /* LoginViewModel.swift in Sources */,
 				02ECEA912C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift in Sources */,
@@ -494,6 +660,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -550,6 +717,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -558,13 +726,17 @@
 		};
 		8BD311C42C5ACBFF0013A159 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84A45E6A922DEEEBE1075616 /* Pods-EazyShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EazyShop/EazyShop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EazyShop/Preview Content\"";
+				DEVELOPMENT_TEAM = 38V5N63B5Z;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EazyShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -577,7 +749,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ba.EazyShop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cr.EazyShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -587,13 +759,17 @@
 		};
 		8BD311C52C5ACBFF0013A159 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52A00575E983F1E6E61743BF /* Pods-EazyShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EazyShop/EazyShop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EazyShop/Preview Content\"";
+				DEVELOPMENT_TEAM = 38V5N63B5Z;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EazyShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -606,7 +782,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ba.EazyShop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cr.EazyShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -616,6 +792,7 @@
 		};
 		8BD311C72C5ACBFF0013A159 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CE84C7DA16A390BC1E1F834 /* Pods-EazyShopTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -635,6 +812,7 @@
 		};
 		8BD311C82C5ACBFF0013A159 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35122CC592220621F8BAEC4B /* Pods-EazyShopTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -654,6 +832,7 @@
 		};
 		8BD311CA2C5ACBFF0013A159 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B2F8D4B371C707968D14619 /* Pods-EazyShop-EazyShopUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -671,6 +850,7 @@
 		};
 		8BD311CB2C5ACBFF0013A159 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B50D06A84873177952F260C /* Pods-EazyShop-EazyShopUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
