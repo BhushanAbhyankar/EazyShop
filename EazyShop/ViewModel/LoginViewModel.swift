@@ -10,6 +10,38 @@ import Combine
 import FirebaseFirestore
 import FirebaseAuth
 
+class fakeServiceManager: FireBaseServiceActions {
+    func login(email: String, password: String, completion: @escaping (Result<Void, any Error>) -> Void) {
+        //completion {
+    }
+    
+    func checkIfEmailExists(email: String, completion: @escaping (Bool) -> Void) {
+        <#code#>
+    }
+    
+    func signUp(name: String, email: String, password: String, completion: @escaping (Result<Void, any Error>) -> Void) {
+        <#code#>
+    }
+    
+    func addUserToDatabase(name: String, email: String, password: String, completion: @escaping (Result<Void, any Error>) -> Void) {
+        <#code#>
+    }
+    
+    func fetchUser(email: String, completion: @escaping (Result<[String : Any], any Error>) -> Void) {
+        <#code#>
+    }
+    
+    func signInWithFacebook() {
+        <#code#>
+    }
+    
+    func signInWithGoogle() {
+        <#code#>
+    }
+    
+    
+}
+
 
 class LoginViewModel: ObservableObject {
     @Published var name: String = ""
@@ -22,7 +54,21 @@ class LoginViewModel: ObservableObject {
     
     private var cancellables = Set<AnyCancellable>()
     
-    private let firebaseService = FirebaseService()
+    var firebaseService: FireBaseServiceActions
+    
+    init(firebaseService: FireBaseServiceActions) {
+        self.firebaseService = firebaseService
+        
+        self.$email
+            .sink { [weak self] newValue in
+                self?.isValidEmail = newValue.isValidEmail()
+                if !newValue.isEmpty {
+                    self?.hasStartedTyping = true
+                }
+            }
+            .store(in: &cancellables)
+    }
+    
     
     func signUp(completion: @escaping (Result<Void, Error>) -> Void) {
             isLoading = true
@@ -63,17 +109,6 @@ class LoginViewModel: ObservableObject {
                 }
             }
         }
-    
-    init() {
-        $email
-            .sink { [weak self] newValue in
-                self?.isValidEmail = newValue.isValidEmail()
-                if !newValue.isEmpty {
-                    self?.hasStartedTyping = true
-                }
-            }
-            .store(in: &cancellables)
-    }
     
     var errorText: some View {
         if hasStartedTyping && !isValidEmail {
