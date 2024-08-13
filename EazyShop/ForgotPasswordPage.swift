@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ForgotPasswordPage: View {
-    @StateObject private var viewModel = LoginViewModel()
+    @EnvironmentObject private var viewModel: LoginViewModel
     
     @Binding var path: [NavigationDestination]
     
@@ -89,4 +89,5 @@ struct ForgotPasswordPage: View {
 
 #Preview {
     ForgotPasswordPage(path: .constant([]))
+        .environmentObject(LoginViewModel(firebaseService: FirebaseService()))
 }

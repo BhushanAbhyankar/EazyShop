@@ -12,7 +12,17 @@ import FirebaseFirestore
 import FacebookLogin
 import GoogleSignIn
 
-class FirebaseService: ObservableObject {
+protocol FireBaseServiceActions {
+    func login(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)
+    func checkIfEmailExists(email: String, completion: @escaping (Bool) -> Void)
+    func signUp(name: String, email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)
+    func addUserToDatabase(name: String, email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)
+    func fetchUser(email: String, completion: @escaping (Result<[String: Any], Error>) -> Void)
+    func signInWithFacebook()
+    func signInWithGoogle()
+}
+
+class FirebaseService: ObservableObject, FireBaseServiceActions {
     private let auth = Auth.auth()  // Inicializa la instancia de autenticación
     private let db = Firestore.firestore()  // Inicializa la instancia de Firestore
     
@@ -83,7 +93,7 @@ class FirebaseService: ObservableObject {
     }
     
     /// Private function to add a user to Firestore.
-    private func addUserToDatabase(name: String, email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
+    func addUserToDatabase(name: String, email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
         let db = Firestore.firestore()
         let user = ["name": name, "email": email, "password": password]
         
@@ -111,27 +121,27 @@ class FirebaseService: ObservableObject {
         }
     }
     
-    /// Func to update data of a Firebase user
-    func updateUser(email: String, newData: [String: Any], completion: @escaping (Result<Void, Error>) -> Void) {
-        db.collection("users").document(email).updateData(newData) { error in
-            if let error = error {
-                completion(.failure(error))
-            } else {
-                completion(.success(()))
-            }
-        }
-    }
+//    /// Func to update data of a Firebase user
+//    func updateUser(email: String, newData: [String: Any], completion: @escaping (Result<Void, Error>) -> Void) {
+//        db.collection("users").document(email).updateData(newData) { error in
+//            if let error = error {
+//                completion(.failure(error))
+//            } else {
+//                completion(.success(()))
+//            }
+//        }
+//    }
     
-    /// Func to delete a user from Firestore
-    func deleteUser(email: String, completion: @escaping (Result<Void, Error>) -> Void) {
-        db.collection("users").document(email).delete { error in
-            if let error = error {
-                completion(.failure(error))
-            } else {
-                completion(.success(()))
-            }
-        }
-    }
+//    /// Func to delete a user from Firestore
+//    func deleteUser(email: String, completion: @escaping (Result<Void, Error>) -> Void) {
+//        db.collection("users").document(email).delete { error in
+//            if let error = error {
+//                completion(.failure(error))
+//            } else {
+//                completion(.success(()))
+//            }
+//        }
+//    }
     
     /// Sign in with Facebook
     func signInWithFacebook() {

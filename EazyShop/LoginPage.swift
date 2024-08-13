@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginPage: View {
-    @StateObject private var viewModel = LoginViewModel()
+    @EnvironmentObject private var viewModel: LoginViewModel
     @ObservedObject private var firebase = FirebaseService()
     
     @Binding var path: [NavigationDestination]
@@ -155,4 +155,5 @@ struct LoginPage: View {
 
 #Preview {
     LoginPage(path: .constant([]))
+        .environmentObject(LoginViewModel(firebaseService: FirebaseService()))
 }

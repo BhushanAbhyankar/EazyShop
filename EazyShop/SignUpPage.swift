@@ -9,7 +9,7 @@ import SwiftUI
 import FBSDKCoreKit
 
 struct SignUpPage: View {
-    @StateObject private var viewModel = LoginViewModel()
+    @EnvironmentObject private var viewModel: LoginViewModel
     @ObservedObject private var firebase = FirebaseService()
     @Binding var path: [NavigationDestination]
     //@State private var nextView: Bool = false
@@ -169,4 +169,5 @@ struct SignUpPage: View {
 
 #Preview {
     SignUpPage(path: .constant([]))
+        .environmentObject(LoginViewModel(firebaseService: FirebaseService()))
 }

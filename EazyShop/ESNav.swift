@@ -17,6 +17,7 @@ enum NavigationDestination: Hashable {
 
 struct ESNav: View {
 //    @State private var navigateToSignUp: Bool = false
+    @StateObject private var viewModel = LoginViewModel(firebaseService: FirebaseService())
     @State var path: [NavigationDestination] = []
     
     var body: some View {
@@ -39,10 +40,13 @@ struct ESNav: View {
                         ESNav()
                     case .SignUpPage:
                         SignUpPage(path: $path)
+                            .environmentObject(viewModel)
                     case .LoginPage:
                         LoginPage(path: $path)
+                            .environmentObject(viewModel)
                     case .ForgotPasswordPage:
                         ForgotPasswordPage(path: $path)
+                            .environmentObject(viewModel)
                     case .HomeView:
                         HomeView(path: $path)
                     }
