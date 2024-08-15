@@ -10,6 +10,17 @@ import SwiftData
 
 @main
 struct EazyShopApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    init() {
+        if let facebookAppID = Bundle.main.object(forInfoDictionaryKey: "FacebookAppID") as? String {
+            print("Facebook App ID: \(facebookAppID)")
+        } else {
+            print("Facebook App ID not found in Info.plist")
+        }
+    }
+
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
