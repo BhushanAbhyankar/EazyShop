@@ -10,37 +10,37 @@ import Combine
 import FirebaseFirestore
 import FirebaseAuth
 
-class fakeServiceManager: FireBaseServiceActions {
-    func login(email: String, password: String, completion: @escaping (Result<Void, any Error>) -> Void) {
-        //completion {
-    }
-    
-    func checkIfEmailExists(email: String, completion: @escaping (Bool) -> Void) {
-        <#code#>
-    }
-    
-    func signUp(name: String, email: String, password: String, completion: @escaping (Result<Void, any Error>) -> Void) {
-        <#code#>
-    }
-    
-    func addUserToDatabase(name: String, email: String, password: String, completion: @escaping (Result<Void, any Error>) -> Void) {
-        <#code#>
-    }
-    
-    func fetchUser(email: String, completion: @escaping (Result<[String : Any], any Error>) -> Void) {
-        <#code#>
-    }
-    
-    func signInWithFacebook() {
-        <#code#>
-    }
-    
-    func signInWithGoogle() {
-        <#code#>
-    }
-    
-    
-}
+//class fakeServiceManager: FireBaseServiceActions {
+//    func login(email: String, password: String, completion: @escaping (Result<Void, any Error>) -> Void) {
+//        //completion {
+//    }
+//    
+//    func checkIfEmailExists(email: String, completion: @escaping (Bool) -> Void) {
+//        <#code#>
+//    }
+//    
+//    func signUp(name: String, email: String, password: String, completion: @escaping (Result<Void, any Error>) -> Void) {
+//        <#code#>
+//    }
+//    
+//    func addUserToDatabase(name: String, email: String, password: String, completion: @escaping (Result<Void, any Error>) -> Void) {
+//        <#code#>
+//    }
+//    
+//    func fetchUser(email: String, completion: @escaping (Result<[String : Any], any Error>) -> Void) {
+//        <#code#>
+//    }
+//    
+//    func signInWithFacebook() {
+//        <#code#>
+//    }
+//    
+//    func signInWithGoogle() {
+//        <#code#>
+//    }
+//    
+//    
+//}
 
 
 class LoginViewModel: ObservableObject {

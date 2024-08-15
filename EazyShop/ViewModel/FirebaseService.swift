@@ -10,6 +10,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseFirestore
 import FacebookLogin
+import FBSDKCoreKit
 import GoogleSignIn
 
 protocol FireBaseServiceActions {
@@ -145,30 +146,30 @@ class FirebaseService: ObservableObject, FireBaseServiceActions {
     
     /// Sign in with Facebook
     func signInWithFacebook() {
-        let loginManager = LoginManager()
-        loginManager.loginBehavior = .browser
-        loginManager.logIn(permissions: [.publicProfile, .email], viewController: nil) { result in
-            switch result {
-            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-                let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
-                Auth.auth().signIn(with: credential) { authResult, error in
-                    if let error = error {
-                        print("Error en el inicio de sesión con Facebook: \(error.localizedDescription)")
-                        return
-                    }
-                    // Inicio de sesión exitoso
-                    print("Inicio de sesión con Facebook exitoso.")
-                    // Aquí puedes manejar la navegación o el estado del usuario después de un login exitoso
-                    DispatchQueue.main.async {
-                        self.isLoggedIn = true
-                    }
-                }
-            case .cancelled:
-                print("Inicio de sesión cancelado.")
-            case .failed(let error):
-                print("Error en el inicio de sesión con Facebook: \(error.localizedDescription)")
-            }
-        }
+//        let loginManager = LoginManager()
+//        loginManager.loginBehavior = .browser
+//        loginManager.logIn(permissions: [.publicProfile, .email], viewController: nil) { result in
+//            switch result {
+//            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+//                let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+//                Auth.auth().signIn(with: credential) { authResult, error in
+//                    if let error = error {
+//                        print("Error en el inicio de sesión con Facebook: \(error.localizedDescription)")
+//                        return
+//                    }
+//                    // Inicio de sesión exitoso
+//                    print("Inicio de sesión con Facebook exitoso.")
+//                    // Aquí puedes manejar la navegación o el estado del usuario después de un login exitoso
+//                    DispatchQueue.main.async {
+//                        self.isLoggedIn = true
+//                    }
+//                }
+//            case .cancelled:
+//                print("Inicio de sesión cancelado.")
+//            case .failed(let error):
+//                print("Error en el inicio de sesión con Facebook: \(error.localizedDescription)")
+//            }
+//        }
     }
     
     func signInWithGoogle() {
