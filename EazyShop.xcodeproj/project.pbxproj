@@ -15,6 +15,13 @@
 		8BD311B42C5ACBFF0013A159 /* EazyShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311B32C5ACBFF0013A159 /* EazyShopTests.swift */; };
 		8BD311BE2C5ACBFF0013A159 /* EazyShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311BD2C5ACBFF0013A159 /* EazyShopUITests.swift */; };
 		8BD311C02C5ACBFF0013A159 /* EazyShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311BF2C5ACBFF0013A159 /* EazyShopUITestsLaunchTests.swift */; };
+		F10072922C6E7B7900AA7CDC /* EazyShopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10072912C6E7B7900AA7CDC /* EazyShopTabView.swift */; };
+		F10072942C6E7B9700AA7CDC /* ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10072932C6E7B9700AA7CDC /* ShoppingView.swift */; };
+		F10072962C6E7BBB00AA7CDC /* EazyShopHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10072952C6E7BBB00AA7CDC /* EazyShopHomeView.swift */; };
+		F10072982C6E7BD000AA7CDC /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10072972C6E7BD000AA7CDC /* CartView.swift */; };
+		F100729A2C6E7CDB00AA7CDC /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10072992C6E7CDB00AA7CDC /* FavoritesView.swift */; };
+		F100729C2C6E7CFC00AA7CDC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F100729B2C6E7CFC00AA7CDC /* ProfileView.swift */; };
+		F10072A12C6E7D2300AA7CDC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10072A02C6E7D2300AA7CDC /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +53,13 @@
 		8BD311B92C5ACBFF0013A159 /* EazyShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EazyShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD311BD2C5ACBFF0013A159 /* EazyShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazyShopUITests.swift; sourceTree = "<group>"; };
 		8BD311BF2C5ACBFF0013A159 /* EazyShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazyShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F10072912C6E7B7900AA7CDC /* EazyShopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazyShopTabView.swift; sourceTree = "<group>"; };
+		F10072932C6E7B9700AA7CDC /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingView.swift; sourceTree = "<group>"; };
+		F10072952C6E7BBB00AA7CDC /* EazyShopHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazyShopHomeView.swift; sourceTree = "<group>"; };
+		F10072972C6E7BD000AA7CDC /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		F10072992C6E7CDB00AA7CDC /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		F100729B2C6E7CFC00AA7CDC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F10072A02C6E7D2300AA7CDC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +110,8 @@
 		8BD3119F2C5ACBF30013A159 /* EazyShop */ = {
 			isa = PBXGroup;
 			children = (
+				F100729D2C6E7D0500AA7CDC /* Utilities */,
+				F100728B2C6E7B1800AA7CDC /* Views */,
 				8BD311A02C5ACBF30013A159 /* EazyShopApp.swift */,
 				8BD311A22C5ACBF30013A159 /* ContentView.swift */,
 				8BD311A42C5ACBF30013A159 /* Item.swift */,
@@ -128,6 +144,75 @@
 				8BD311BF2C5ACBFF0013A159 /* EazyShopUITestsLaunchTests.swift */,
 			);
 			path = EazyShopUITests;
+			sourceTree = "<group>";
+		};
+		F100728B2C6E7B1800AA7CDC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F10072912C6E7B7900AA7CDC /* EazyShopTabView.swift */,
+				F10072902C6E7B4900AA7CDC /* Profiles */,
+				F100728F2C6E7B4300AA7CDC /* Favorites */,
+				F100728E2C6E7B3800AA7CDC /* Cart */,
+				F100728D2C6E7B2D00AA7CDC /* Shop */,
+				F100728C2C6E7B2500AA7CDC /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F100728C2C6E7B2500AA7CDC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F10072952C6E7BBB00AA7CDC /* EazyShopHomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F100728D2C6E7B2D00AA7CDC /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				F10072932C6E7B9700AA7CDC /* ShoppingView.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		F100728E2C6E7B3800AA7CDC /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				F10072972C6E7BD000AA7CDC /* CartView.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		F100728F2C6E7B4300AA7CDC /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				F10072992C6E7CDB00AA7CDC /* FavoritesView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		F10072902C6E7B4900AA7CDC /* Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				F100729B2C6E7CFC00AA7CDC /* ProfileView.swift */,
+			);
+			path = Profiles;
+			sourceTree = "<group>";
+		};
+		F100729D2C6E7D0500AA7CDC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F10072A22C6E7D5100AA7CDC /* Colors */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F10072A22C6E7D5100AA7CDC /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				F10072A02C6E7D2300AA7CDC /* Color.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +345,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10072942C6E7B9700AA7CDC /* ShoppingView.swift in Sources */,
+				F100729C2C6E7CFC00AA7CDC /* ProfileView.swift in Sources */,
+				F10072982C6E7BD000AA7CDC /* CartView.swift in Sources */,
+				F10072A12C6E7D2300AA7CDC /* Color.swift in Sources */,
 				8BD311A32C5ACBF30013A159 /* ContentView.swift in Sources */,
+				F10072922C6E7B7900AA7CDC /* EazyShopTabView.swift in Sources */,
+				F100729A2C6E7CDB00AA7CDC /* FavoritesView.swift in Sources */,
 				8BD311A52C5ACBF30013A159 /* Item.swift in Sources */,
+				F10072962C6E7BBB00AA7CDC /* EazyShopHomeView.swift in Sources */,
 				8BD311A12C5ACBF30013A159 /* EazyShopApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
