@@ -1,6 +1,0 @@
-framework module Pods_EazyShopTests {
-  umbrella header "Pods-EazyShopTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
