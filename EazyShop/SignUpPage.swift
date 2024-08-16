@@ -170,8 +170,7 @@ struct SignUpPage: View {
                 dismissButton: .default(Text("OK")) {
                     if viewModel.isLoggedIn {
                         path.append(.HomeView)
-                    }
-                    if viewModel.isSignedIn {
+                    } else if viewModel.isSignedIn {
                         path.append(.LoginPage)
                     }
                 }
