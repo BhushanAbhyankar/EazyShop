@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021D6A2B2C6E929D00ADCD5A /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = 021D6A2A2C6E929D00ADCD5A /* FacebookBasics */; };
+		021D6A2E2C6F1F3C00ADCD5A /* FirebaseErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D6A2D2C6F1F3C00ADCD5A /* FirebaseErrorManager.swift */; };
 		022487862C66D1C500180539 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022487852C66D1C500180539 /* HomeView.swift */; };
 		0262DF3A2C61595600689E1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0262DF392C61595600689E1A /* Constants.swift */; };
 		0262DF3D2C618ED600689E1A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0262DF3C2C618ED500689E1A /* LoginViewModel.swift */; };
@@ -75,6 +77,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021D6A2D2C6F1F3C00ADCD5A /* FirebaseErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseErrorManager.swift; sourceTree = "<group>"; };
 		022487842C66658B00180539 /* EazyShop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EazyShop.entitlements; sourceTree = "<group>"; };
 		022487852C66D1C500180539 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0262DF392C61595600689E1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -130,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021D6A2B2C6E929D00ADCD5A /* FacebookBasics in Frameworks */,
 				028C99B32C6E896100EC8B0A /* GoogleSignIn in Frameworks */,
 				028C99B62C6E8A7800EC8B0A /* FacebookCore in Frameworks */,
 				028C99BA2C6E8A7800EC8B0A /* FacebookShare in Frameworks */,
@@ -158,6 +162,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		021D6A2C2C6F1F2000ADCD5A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				021D6A2D2C6F1F3C00ADCD5A /* FirebaseErrorManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		0262DF3B2C618E9E00689E1A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +252,7 @@
 				02ECEA8F2C5AE9FF00B62A2A /* Info.plist */,
 				02ECEA672C5AE9A100B62A2A /* Utilities */,
 				0262DF3B2C618E9E00689E1A /* ViewModel */,
+				021D6A2C2C6F1F2000ADCD5A /* Services */,
 				8BD311A02C5ACBF30013A159 /* EazyShopApp.swift */,
 				8BD311A22C5ACBF30013A159 /* ContentView.swift */,
 				0262DF392C61595600689E1A /* Constants.swift */,
@@ -309,6 +322,7 @@
 				028C99B52C6E8A7800EC8B0A /* FacebookCore */,
 				028C99B72C6E8A7800EC8B0A /* FacebookLogin */,
 				028C99B92C6E8A7800EC8B0A /* FacebookShare */,
+				021D6A2A2C6E929D00ADCD5A /* FacebookBasics */,
 			);
 			productName = EazyShop;
 			productReference = 8BD3119D2C5ACBF30013A159 /* EazyShop.app */;
@@ -460,6 +474,7 @@
 				02ECEA642C5AE82A00B62A2A /* SignUpPage.swift in Sources */,
 				02C7CD9B2C632B45000560AA /* FirebaseService.swift in Sources */,
 				02ECEA992C5B13BA00B62A2A /* ESNav.swift in Sources */,
+				021D6A2E2C6F1F3C00ADCD5A /* FirebaseErrorManager.swift in Sources */,
 				0262DF3D2C618ED600689E1A /* LoginViewModel.swift in Sources */,
 				02ECEA912C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift in Sources */,
 				8BD311A12C5ACBF30013A159 /* EazyShopApp.swift in Sources */,
@@ -826,6 +841,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		021D6A2A2C6E929D00ADCD5A /* FacebookBasics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 028C99B42C6E8A7800EC8B0A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookBasics;
+		};
 		028C99A92C6E86A900EC8B0A /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 028C99A82C6E86A900EC8B0A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
