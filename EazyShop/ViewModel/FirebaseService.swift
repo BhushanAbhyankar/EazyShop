@@ -19,8 +19,8 @@ protocol FireBaseServiceActions {
     func signUp(name: String, email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)
     func addUserToDatabase(name: String, email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)
     func fetchUser(email: String, completion: @escaping (Result<[String: Any], Error>) -> Void)
-    func signInWithFacebook()
-    func signInWithGoogle()
+    func signInWithFacebook(completion: @escaping (Result<Void, Error>) -> Void)
+    func signInWithGoogle(completion: @escaping (Result<Void, Error>) -> Void)
 }
 
 class FirebaseService: ObservableObject, FireBaseServiceActions {
@@ -31,13 +31,17 @@ class FirebaseService: ObservableObject, FireBaseServiceActions {
     @Published var errorMessage: String?
     
     func login(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
-            print("Intentando iniciar sesión con email: \(email)") // Depuración
+            print("Attempting to log in with email: \(email)") // Debbuging
 
             // Iniciar sesión con Firebase Authentication
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let error = error {
-                    print("Error de autenticación: \(error.localizedDescription)") // Depuración
-                    completion(.failure(error))
+                    print("Authentication error: \(error.localizedDescription)") // Debbuging
+                    // Use the FirebaseManager to get a custom error message
+                    let customErrorMessage = FirebaseErrorManager.getCustomErrorMessage(error: error)
+                    // Create a new error with the custom message and return it
+                    let customError = NSError(domain: "Login Error", code: (error as NSError).code, userInfo: [NSLocalizedDescriptionKey : customErrorMessage])
+                    completion(.failure(customError))
                     return
                 }
 
@@ -47,14 +51,20 @@ class FirebaseService: ObservableObject, FireBaseServiceActions {
 
                 docRef.getDocument { (document, error) in
                     if let error = error {
-                        print("Error al obtener el documento: \(error.localizedDescription)") // Depuración
-                        completion(.failure(error))
+                        print("Error fetching document \(error.localizedDescription)") // Debbuging
+                        // Use the FirebaseErrorManager to get a custom error message
+                        let customErrorMessage = FirebaseErrorManager.getCustomErrorMessage(error: error)
+                        // Create a new error with the custom message and return it
+                        let customError = NSError(domain: "FirestoreError", code: (error as NSError).code, userInfo: [NSLocalizedDescriptionKey: customErrorMessage])
+                        completion(.failure(customError))
                     } else if let document = document, document.exists {
-                        print("Usuario encontrado en Firestore, iniciando sesión...") // Depuración
+                        print("User found in Firestore, logging in...") // Debbuging
                         completion(.success(()))
                     } else {
-                        print("Usuario no encontrado en Firestore.") // Depuración
-                        completion(.failure(NSError(domain: "LoginError", code: 404, userInfo: [NSLocalizedDescriptionKey: "Usuario no encontrado en la base de datos."])))
+                        print("User not found in Firestore.") // Debugging
+                        let customErrorMessage = "User not found in the database."
+                        let customError = NSError(domain: "LoginError", code: 404, userInfo: [NSLocalizedDescriptionKey: customErrorMessage])
+                        completion(.failure(customError))
                     }
                 }
             }
@@ -76,7 +86,7 @@ class FirebaseService: ObservableObject, FireBaseServiceActions {
     func signUp(name: String, email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
         // Validar campos vacíos
         guard !name.isEmpty, !email.isEmpty, !password.isEmpty else {
-            completion(.failure(NSError(domain: "SignUpError", code: 400, userInfo: [NSLocalizedDescriptionKey: "Todos los campos son requeridos."])))
+            completion(.failure(NSError(domain: "SignUpError", code: 400, userInfo: [NSLocalizedDescriptionKey: "All fields are required."])))
             return
         }
         
@@ -145,34 +155,43 @@ class FirebaseService: ObservableObject, FireBaseServiceActions {
 //    }
     
     /// Sign in with Facebook
-    func signInWithFacebook() {
-//        let loginManager = LoginManager()
-//        loginManager.loginBehavior = .browser
-//        loginManager.logIn(permissions: [.publicProfile, .email], viewController: nil) { result in
-//            switch result {
-//            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-//                let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
-//                Auth.auth().signIn(with: credential) { authResult, error in
-//                    if let error = error {
-//                        print("Error en el inicio de sesión con Facebook: \(error.localizedDescription)")
-//                        return
-//                    }
-//                    // Inicio de sesión exitoso
-//                    print("Inicio de sesión con Facebook exitoso.")
-//                    // Aquí puedes manejar la navegación o el estado del usuario después de un login exitoso
-//                    DispatchQueue.main.async {
-//                        self.isLoggedIn = true
-//                    }
-//                }
-//            case .cancelled:
-//                print("Inicio de sesión cancelado.")
-//            case .failed(let error):
-//                print("Error en el inicio de sesión con Facebook: \(error.localizedDescription)")
-//            }
-//        }
+    func signInWithFacebook(completion: @escaping (Result<Void, Error>) -> Void) {
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: ["public_profile", "email"], from: nil) { result, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let result = result, !result.isCancelled else {
+                let cancellationError = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Login cancelled."])
+                completion(.failure(cancellationError))
+                return
+            }
+            
+            guard let tokenString = AccessToken.current?.tokenString else {
+                let tokenError = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "An access token was not obtained."])
+                completion(.failure(tokenError))
+                return
+            }
+            
+            let credential = FacebookAuthProvider.credential(withAccessToken: tokenString)
+            Auth.auth().signIn(with: credential) { authResult, error in
+                if let error = error {
+                    completion(.failure(error))
+                    return
+                }
+                
+                // Inicio de sesión exitoso
+                DispatchQueue.main.async {
+                    self.isLoggedIn = true
+                    completion(.success(()))
+                }
+            }
+        }
     }
-    
-    func signInWithGoogle() {
+
+    func signInWithGoogle(completion: @escaping (Result<Void, Error>) -> Void) {
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
         
         let config = GIDConfiguration(clientID: clientID)
@@ -183,17 +202,19 @@ class FirebaseService: ObservableObject, FireBaseServiceActions {
         
         GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController) { result, error in
             if let error = error {
-                print("Error en el inicio de sesión con Google: \(error.localizedDescription)")
+                completion(.failure(error))
                 return
             }
             
             guard let result = result else {
-                print("No se obtuvo resultado del inicio de sesión de Google.")
+                let resultError = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No result was obtained from the Google sign-in."])
+                completion(.failure(resultError))
                 return
             }
             
             guard let idToken = result.user.idToken?.tokenString else {
-                print("No se pudo obtener el ID token de Google.")
+                let tokenError = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "The Google ID token could not be retrieved."])
+                completion(.failure(tokenError))
                 return
             }
             
@@ -201,12 +222,13 @@ class FirebaseService: ObservableObject, FireBaseServiceActions {
             
             Auth.auth().signIn(with: credential) { authResult, error in
                 if let error = error {
-                    print("Error en el inicio de sesión con Google: \(error.localizedDescription)")
+                    completion(.failure(error))
                     return
                 }
-                print("Inicio de sesión con Google exitoso.")
+                
                 DispatchQueue.main.async {
                     self.isLoggedIn = true
+                    completion(.success(()))
                 }
             }
         }

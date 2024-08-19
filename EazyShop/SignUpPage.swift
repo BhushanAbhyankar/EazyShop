@@ -89,7 +89,7 @@ struct SignUpPage: View {
                 HStack {
                     Spacer()
                     Text(Constants.Text.alreadyHaveAnAccount)
-                        .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Constants.Colors.black)
+                        .fontMetropolis(fontSize: 14, fontWeight: .bold, fontColor: Constants.Colors.black)
                     
                     Button(action: {
                         path.append(.LoginPage)
@@ -101,22 +101,27 @@ struct SignUpPage: View {
                 }
                 .padding(.bottom, 28)
                 
-                if let errorMessage = viewModel.errorMessage {
-                    Text(errorMessage)
-                        .foregroundColor(.red)
-                        .padding()
-                }
+                //                if let errorMessage = viewModel.errorMessage {
+                //                    Text(errorMessage)
+                //                        .foregroundColor(.red)
+                //                        .padding()
+                //                }
                 
                 // Sign Up Button
                 ESButton(Constants.Buttons.signUp) {
                     viewModel.signUp { result in
                         switch result {
                         case .success:
-                            print("Registro exitoso")
-                            path.append(.LoginPage)
+                            viewModel.errorMessage = "Sign up successful."
+                            viewModel.showAlert = true
+                            viewModel.isSignedIn = true
+                            print("Sign up success")
                         case .failure(let error):
                             // Muestra el error en la interfaz de usuario
                             viewModel.errorMessage = error.localizedDescription
+                            viewModel.showAlert = true
+                            viewModel.isSignedIn = false
+                            print("Sign up error")
                         }
                     }
                 }
@@ -134,7 +139,7 @@ struct SignUpPage: View {
                 HStack(spacing: 16) {
                     Button(action: {
                         // Google sign up
-                        firebase.signInWithGoogle()
+                        viewModel.signInWithGoogle()
                     }) {
                         Image(Constants.Images.google)
                             .frame(width: 92, height: 64)
@@ -144,7 +149,7 @@ struct SignUpPage: View {
                     
                     Button(action: {
                         // Facebook sign up
-                        firebase.signInWithFacebook()
+                        viewModel.signInWithFacebook()
                     }) {
                         Image(Constants.Images.facebook)
                             .frame(width: 92, height: 64)
@@ -158,10 +163,18 @@ struct SignUpPage: View {
         .padding()
         .padding(.top, 18)
         .background(Constants.Colors.backgroundLightGray)
-        .onChange(of: firebase.isLoggedIn) { oldValue, newValue in
-            if newValue {
-                path.append(.HomeView)
-            }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(
+                title: Text("Sign up"),
+                message: Text(viewModel.errorMessage ?? ""),
+                dismissButton: .default(Text("OK")) {
+                    if viewModel.isLoggedIn {
+                        path.append(.HomeView)
+                    } else if viewModel.isSignedIn {
+                        path.append(.LoginPage)
+                    }
+                }
+            )
         }
         //        .navigationDestination(isPresented: $nextView) { LoginPage() }
     }

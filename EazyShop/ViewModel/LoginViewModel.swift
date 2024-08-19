@@ -10,38 +10,6 @@ import Combine
 import FirebaseFirestore
 import FirebaseAuth
 
-//class fakeServiceManager: FireBaseServiceActions {
-//    func login(email: String, password: String, completion: @escaping (Result<Void, any Error>) -> Void) {
-//        //completion {
-//    }
-//    
-//    func checkIfEmailExists(email: String, completion: @escaping (Bool) -> Void) {
-//        <#code#>
-//    }
-//    
-//    func signUp(name: String, email: String, password: String, completion: @escaping (Result<Void, any Error>) -> Void) {
-//        <#code#>
-//    }
-//    
-//    func addUserToDatabase(name: String, email: String, password: String, completion: @escaping (Result<Void, any Error>) -> Void) {
-//        <#code#>
-//    }
-//    
-//    func fetchUser(email: String, completion: @escaping (Result<[String : Any], any Error>) -> Void) {
-//        <#code#>
-//    }
-//    
-//    func signInWithFacebook() {
-//        <#code#>
-//    }
-//    
-//    func signInWithGoogle() {
-//        <#code#>
-//    }
-//    
-//    
-//}
-
 
 class LoginViewModel: ObservableObject {
     @Published var name: String = ""
@@ -51,6 +19,10 @@ class LoginViewModel: ObservableObject {
     @Published var hasStartedTyping: Bool = false
     @Published var errorMessage: String?
     @Published var isLoading: Bool = false
+    @Published var showAlert: Bool = false
+    @Published var showResetAlert: Bool = false
+    @Published var isLoggedIn: Bool = false
+    @Published var isSignedIn: Bool = false
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -71,44 +43,89 @@ class LoginViewModel: ObservableObject {
     
     
     func signUp(completion: @escaping (Result<Void, Error>) -> Void) {
-            isLoading = true
-            firebaseService.signUp(name: name, email: email, password: password) { [weak self] result in
-                DispatchQueue.main.async {
-                    self?.isLoading = false
-                    completion(result)
-                }
+        isLoading = true
+        firebaseService.signUp(name: name, email: email, password: password) { [weak self] result in
+            DispatchQueue.main.async {
+                self?.isLoading = false
+                completion(result)
             }
         }
+    }
+    
+    func signInWithFacebook() {
+        firebaseService.signInWithFacebook { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    self?.isLoggedIn = true
+                    self?.errorMessage = "Successful Facebook login."
+                case .failure(let error):
+                    if let errorCode = AuthErrorCode(rawValue: (error as NSError).code), errorCode == .accountExistsWithDifferentCredential {
+                        self?.errorMessage = "An account with this email already exists but with different credentials. Please use the appropriate provider to sign in."
+                    } else {
+                        self?.errorMessage = "Error logging in with Facebook: \(error.localizedDescription)"
+                    }
+                    self?.isLoggedIn = false // Do not navigate to HomeView
+                }
+                self?.showAlert = true
+            }
+        }
+    }
+
+    func signInWithGoogle() {
+        firebaseService.signInWithGoogle { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    self?.isLoggedIn = true
+                    self?.errorMessage = "Successful Google login."
+                case .failure(let error):
+                    if let errorCode = AuthErrorCode(rawValue: (error as NSError).code), errorCode == .accountExistsWithDifferentCredential {
+                        self?.errorMessage = "An account with this email already exists but with different credentials. Please use the appropriate provider to sign in."
+                    } else {
+                        self?.errorMessage = "Error logging in with Google: \(error.localizedDescription)"
+                    }
+                    self?.isLoggedIn = false // Do not navigate to HomeView
+                }
+                self?.showAlert = true
+            }
+        }
+    }
+
     
     func resetPassword(completion: @escaping (Result<Void, Error>) -> Void) {
-            guard !email.isEmpty else {
-                self.errorMessage = "Mail cannot be empty."
-                return
-            }
-            
-            // Verify if mail exist in DB
-            let db = Firestore.firestore()
-            let userRef = db.collection("users").document(email)
-            
-            userRef.getDocument { document, error in
-                if let document = document, document.exists {
-                    // Si el documento existe, enviamos el correo de restablecimiento
-                    Auth.auth().sendPasswordReset(withEmail: self.email) { error in
-                        if let error = error {
-                            self.errorMessage = "Fail to send link: \(error.localizedDescription)"
-                            completion(.failure(error))
-                        } else {
-                            self.errorMessage = "A link to reset password has been sent."
-                            completion(.success(()))
-                        }
-                    }
-                } else {
-                    // Si el documento no existe, mostramos un mensaje de error
-                    self.errorMessage = "There is any user with this email account."
-                    completion(.failure(NSError(domain: "UserNotFound", code: 404, userInfo: [NSLocalizedDescriptionKey: "There is any user with this email account."])))
-                }
-            }
+        guard !email.isEmpty else {
+            self.errorMessage = "Mail cannot be empty."
+            return
         }
+        
+        // Verify if mail exist in DB
+        let db = Firestore.firestore()
+        let userRef = db.collection("users").document(email)
+        
+        userRef.getDocument { document, error in
+            if let document = document, document.exists {
+                // Si el documento existe, enviamos el correo de restablecimiento
+                Auth.auth().sendPasswordReset(withEmail: self.email) { error in
+                    if let error = error {
+                        self.errorMessage = "Fail to send link: \(error.localizedDescription)"
+                        completion(.failure(error))
+                        
+                    } else {
+                        self.errorMessage = "A link to reset password has been sent."
+                        completion(.success(()))
+                    }
+                }
+            } else {
+                // Si el documento no existe, mostramos un mensaje de error
+                self.errorMessage = "There is any user with this email account."
+                completion(.failure(NSError(domain: "UserNotFound", code: 404, userInfo: [NSLocalizedDescriptionKey: "There is any user with this email account."])))
+            }
+//            DispatchQueue.main.async {
+                self.showResetAlert = true
+//            }
+        }
+    }
     
     var errorText: some View {
         if hasStartedTyping && !isValidEmail {

@@ -82,12 +82,12 @@ struct LoginPage: View {
                 }
                 .padding(.bottom, 28)
                 
-                // Error message
-                if let errorMessage = viewModel.errorMessage {
-                    Text(errorMessage)
-                        .foregroundColor(.red)
-                        .padding()
-                }
+//                // Error message
+//                if let errorMessage = viewModel.errorMessage {
+//                    Text(errorMessage)
+//                        .foregroundColor(.red)
+//                        .padding()
+//                }
                 
                 // Login Button
                 ESButton(Constants.Buttons.login) {
@@ -96,11 +96,16 @@ struct LoginPage: View {
                     firebase.login(email: viewModel.email, password: viewModel.password) { result in
                         switch result {
                         case .success:
+                            viewModel.errorMessage = "Login successful."
+                            viewModel.showAlert = true
+                            viewModel.isLoggedIn = true
                             print("Navegando a HomeView...") // Depuración
-                            path.append(.HomeView)
                         case .failure(let error):
                             print("Error: \(error.localizedDescription)") // Depuración
                             viewModel.errorMessage = error.localizedDescription
+                            viewModel.showAlert = true
+                            viewModel.isLoggedIn = false
+                            print("Login fail")
                         }
                     }
                 }
@@ -118,7 +123,7 @@ struct LoginPage: View {
                 HStack(spacing: 16) {
                     Button(action: {
                         // Google sign up
-                        firebase.signInWithGoogle()
+                        viewModel.signInWithGoogle()
                     }) {
                         Image(Constants.Images.google)
                             .frame(width: 92, height: 64)
@@ -128,7 +133,7 @@ struct LoginPage: View {
                     
                     Button(action: {
                         // Facebook sign up
-                        firebase.signInWithFacebook()
+                        viewModel.signInWithFacebook()
                     }) {
                         Image(Constants.Images.facebook)
                             .frame(width: 92, height: 64)
@@ -142,11 +147,22 @@ struct LoginPage: View {
         .padding()
         .padding(.top, 18)
         .background(Constants.Colors.backgroundLightGray)
-        .onChange(of: firebase.isLoggedIn) { oldValue, newValue in
-            if newValue {
-                path.append(.HomeView)
-            }
-        }
+        .alert(isPresented: $viewModel.showAlert) {
+                    Alert(
+                        title: Text("Login"),
+                        message: Text(viewModel.errorMessage ?? ""),
+                        dismissButton: .default(Text("OK")) {
+                            if viewModel.isLoggedIn {
+                                path.append(.HomeView)
+                            }
+                        }
+                    )
+                }
+//        .onChange(of: firebase.isLoggedIn) { oldValue, newValue in
+//            if newValue {
+//                path.append(.HomeView)
+//            }
+//        }
         
         //        .navigationDestination(isPresented: $nextView) { ForgotPasswordPage() }
         //        .navigationDestination(isPresented: $nextView2) { ESNav() }

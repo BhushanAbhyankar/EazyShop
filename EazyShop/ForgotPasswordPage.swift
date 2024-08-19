@@ -55,11 +55,11 @@ struct ForgotPasswordPage: View {
                 }
                 .padding(.bottom, 39)
                 
-                if let errorMessage = viewModel.errorMessage {
-                    Text(errorMessage)
-                        .foregroundColor(.red)
-                        .padding()
-                }
+//                if let errorMessage = viewModel.errorMessage {
+//                    Text(errorMessage)
+//                        .foregroundColor(.red)
+//                        .padding()
+//                }
                 
                 // Sign Up Button
                 ESButton(Constants.Buttons.send) {
@@ -83,7 +83,17 @@ struct ForgotPasswordPage: View {
         .padding()
         .padding(.top, 18)
         .background(Constants.Colors.backgroundLightGray)
-        
+        .alert(isPresented: $viewModel.showResetAlert) {
+                    Alert(
+                        title: Text("Password reset"),
+                        message: Text(viewModel.errorMessage ?? ""),
+                        dismissButton: .default(Text("OK")) {
+                            
+                                path.removeLast()
+                            
+                        }
+                    )
+                }
     }
 }
 
