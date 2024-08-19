@@ -48,7 +48,8 @@ struct ESNav: View {
                         ForgotPasswordPage(path: $path)
                             .environmentObject(viewModel)
                     case .HomeView:
-                        HomeView(path: $path)
+//                        HomeView(path: $path)
+                        EazyShopTabView(path: $path)
                     }
                 }
             }
