@@ -57,6 +57,13 @@
 		8BD311B42C5ACBFF0013A159 /* EazyShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311B32C5ACBFF0013A159 /* EazyShopTests.swift */; };
 		8BD311BE2C5ACBFF0013A159 /* EazyShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311BD2C5ACBFF0013A159 /* EazyShopUITests.swift */; };
 		8BD311C02C5ACBFF0013A159 /* EazyShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311BF2C5ACBFF0013A159 /* EazyShopUITestsLaunchTests.swift */; };
+		F1984D542C7392CB008E7B29 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1984D532C7392CB008E7B29 /* Color.swift */; };
+		F1984D5C2C739519008E7B29 /* EazyShopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1984D5B2C739519008E7B29 /* EazyShopTabView.swift */; };
+		F1984D5E2C739569008E7B29 /* ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1984D5D2C739569008E7B29 /* ShoppingView.swift */; };
+		F1984D602C739586008E7B29 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1984D5F2C739586008E7B29 /* ProfileView.swift */; };
+		F1984D622C7395CB008E7B29 /* EazyShopHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1984D612C7395CB008E7B29 /* EazyShopHomeView.swift */; };
+		F1984D642C739612008E7B29 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1984D632C739612008E7B29 /* FavoritesView.swift */; };
+		F1984D662C73967C008E7B29 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1984D652C73967C008E7B29 /* CartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +133,13 @@
 		8BD311BF2C5ACBFF0013A159 /* EazyShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazyShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8C528D551B92CDC2D1FB95A1 /* Pods_EazyShop_EazyShopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EazyShop_EazyShopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8586A6771E1079CAAF85630 /* Pods_EazyShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EazyShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1984D532C7392CB008E7B29 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F1984D5B2C739519008E7B29 /* EazyShopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazyShopTabView.swift; sourceTree = "<group>"; };
+		F1984D5D2C739569008E7B29 /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingView.swift; sourceTree = "<group>"; };
+		F1984D5F2C739586008E7B29 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F1984D612C7395CB008E7B29 /* EazyShopHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazyShopHomeView.swift; sourceTree = "<group>"; };
+		F1984D632C739612008E7B29 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		F1984D652C73967C008E7B29 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +197,7 @@
 		02ECEA672C5AE9A100B62A2A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F1984D522C739296008E7B29 /* Colors */,
 				02ECEA7B2C5AE9BF00B62A2A /* metropolis-font */,
 			);
 			path = Utilities;
@@ -248,6 +263,7 @@
 		8BD3119F2C5ACBF30013A159 /* EazyShop */ = {
 			isa = PBXGroup;
 			children = (
+				F1984D552C73937E008E7B29 /* Views */,
 				022487842C66658B00180539 /* EazyShop.entitlements */,
 				02ECEA8F2C5AE9FF00B62A2A /* Info.plist */,
 				02ECEA672C5AE9A100B62A2A /* Utilities */,
@@ -295,6 +311,67 @@
 				8BD311BF2C5ACBFF0013A159 /* EazyShopUITestsLaunchTests.swift */,
 			);
 			path = EazyShopUITests;
+			sourceTree = "<group>";
+		};
+		F1984D522C739296008E7B29 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				F1984D532C7392CB008E7B29 /* Color.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		F1984D552C73937E008E7B29 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1984D5A2C73949E008E7B29 /* Shop */,
+				F1984D592C7393C3008E7B29 /* Profiles */,
+				F1984D582C7393AC008E7B29 /* Home */,
+				F1984D572C73938D008E7B29 /* Favorites */,
+				F1984D562C739386008E7B29 /* Cart */,
+				F1984D5B2C739519008E7B29 /* EazyShopTabView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F1984D562C739386008E7B29 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				F1984D652C73967C008E7B29 /* CartView.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		F1984D572C73938D008E7B29 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				F1984D632C739612008E7B29 /* FavoritesView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		F1984D582C7393AC008E7B29 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F1984D612C7395CB008E7B29 /* EazyShopHomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F1984D592C7393C3008E7B29 /* Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				F1984D5F2C739586008E7B29 /* ProfileView.swift */,
+			);
+			path = Profiles;
+			sourceTree = "<group>";
+		};
+		F1984D5A2C73949E008E7B29 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				F1984D5D2C739569008E7B29 /* ShoppingView.swift */,
+			);
+			path = Shop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,20 +540,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1984D642C739612008E7B29 /* FavoritesView.swift in Sources */,
 				02ECEA9B2C5B73EB00B62A2A /* ForgotPasswordPage.swift in Sources */,
 				0262DF3A2C61595600689E1A /* Constants.swift in Sources */,
 				02ECEA972C5B094700B62A2A /* LoginPage.swift in Sources */,
 				022487862C66D1C500180539 /* HomeView.swift in Sources */,
+				F1984D662C73967C008E7B29 /* CartView.swift in Sources */,
+				F1984D542C7392CB008E7B29 /* Color.swift in Sources */,
 				02ECEA952C5AFEB700B62A2A /* ESButton.swift in Sources */,
 				02C352302C65F90B0024AF14 /* AppDelegate.swift in Sources */,
+				F1984D622C7395CB008E7B29 /* EazyShopHomeView.swift in Sources */,
 				8BD311A32C5ACBF30013A159 /* ContentView.swift in Sources */,
 				8BD311A52C5ACBF30013A159 /* Item.swift in Sources */,
 				02ECEA642C5AE82A00B62A2A /* SignUpPage.swift in Sources */,
 				02C7CD9B2C632B45000560AA /* FirebaseService.swift in Sources */,
+				F1984D5E2C739569008E7B29 /* ShoppingView.swift in Sources */,
+				F1984D602C739586008E7B29 /* ProfileView.swift in Sources */,
 				02ECEA992C5B13BA00B62A2A /* ESNav.swift in Sources */,
 				021D6A2E2C6F1F3C00ADCD5A /* FirebaseErrorManager.swift in Sources */,
 				0262DF3D2C618ED600689E1A /* LoginViewModel.swift in Sources */,
 				02ECEA912C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift in Sources */,
+				F1984D5C2C739519008E7B29 /* EazyShopTabView.swift in Sources */,
 				8BD311A12C5ACBF30013A159 /* EazyShopApp.swift in Sources */,
 				02ECEA932C5AFDCD00B62A2A /* Utils.swift in Sources */,
 			);
