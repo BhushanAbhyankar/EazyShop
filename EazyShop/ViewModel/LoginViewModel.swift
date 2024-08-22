@@ -130,9 +130,9 @@ class LoginViewModel: ObservableObject {
     var errorText: some View {
         if hasStartedTyping && !isValidEmail {
             return AnyView(
-                Text(Constants.Text.confirmEmail)
-                    .font(.custom(Constants.Fonts.metropolisRegular, size: 11))
-                    .foregroundColor(Constants.Colors.redError)
+                Text(TextConstants.confirmEmail)
+                    .font(.custom(FontConstants.metropolisRegular, size: 11))
+                    .foregroundColor(Color.redError)
                     .textSelection(.disabled)
             )
         } else {
@@ -142,7 +142,7 @@ class LoginViewModel: ObservableObject {
     
     var overlayColor: Color {
         if hasStartedTyping {
-            return isValidEmail ? Color(.clear) : Constants.Colors.redError
+            return isValidEmail ? Color(.clear) : Color.redError
         } else {
             return Color(.clear)
         }
@@ -151,7 +151,7 @@ class LoginViewModel: ObservableObject {
     var nameCheckImage: some View {
         if !name.isEmpty {
             return AnyView(
-                Image(Constants.Images.check)
+                Image(ImageConstants.check)
                     .foregroundColor(.green)
                     .padding(.trailing, 8)
             )
@@ -163,7 +163,7 @@ class LoginViewModel: ObservableObject {
     var mailCheckImage: some View {
         if hasStartedTyping && !isValidEmail {
             return AnyView(
-                Image(Constants.Images.close)
+                Image(ImageConstants.close)
                     .foregroundColor(.red)
                     .padding(.trailing, 8)
             )

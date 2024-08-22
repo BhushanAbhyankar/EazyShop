@@ -15,7 +15,7 @@ struct BaseButtonAndTextStyle: ButtonStyle {
     
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
-            .font(Font.custom(Constants.Fonts.metropolisRegular, size: 14).weight(.bold))
+            .font(Font.custom(FontConstants.metropolisRegular, size: 14).weight(.bold))
             .padding(.horizontal, 24)
             .padding(.vertical, 12)
             .frame(maxWidth: .infinity, minHeight: 48, maxHeight: 48, alignment: .center)
@@ -34,9 +34,9 @@ struct BaseButtonAndTextStyle: ButtonStyle {
 /// Custom Button Style for Filled Style
 struct FilledStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
-        BaseButtonAndTextStyle(backgroundColor: Constants.Colors.red,
-                        textColor: Constants.Colors.white,
-                        overlayColor: Constants.Colors.red)
+        BaseButtonAndTextStyle(backgroundColor: Color.red,
+                        textColor: Color.white,
+                        overlayColor: Color.red)
         .makeBody(configuration: configuration)
     }
 }
@@ -44,9 +44,9 @@ struct FilledStyle: ButtonStyle {
 /// Custom Button Style for Outline Style
 struct OutlineStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
-        BaseButtonAndTextStyle(backgroundColor: Constants.Colors.clear,
-                        textColor: Constants.Colors.black,
-                        overlayColor: Constants.Colors.black)
+        BaseButtonAndTextStyle(backgroundColor: Color.clear,
+                        textColor: Color.black,
+                        overlayColor: Color.black)
         .makeBody(configuration: configuration)
     }
 }
@@ -54,7 +54,7 @@ struct OutlineStyle: ButtonStyle {
 /// Base Text Style
 struct BaseTextStyle: ViewModifier {
     let textColor: Color
-    let customFontName: String = Constants.Fonts.metropolisRegular
+    let customFontName: String = FontConstants.metropolisRegular
     var fontSize: CGFloat
     let fontWeight: Font.Weight
     
@@ -107,10 +107,10 @@ extension SecureField {
         .buttonStyle(OutlineStyle())
         
         Text("Test")
-            .fontMetropolis(fontSize: 34, fontWeight: .bold, fontColor: Constants.Colors.redError)
+            .fontMetropolis(fontSize: 34, fontWeight: .bold, fontColor: Color.redError)
         
         Text("Test")
-            .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Constants.Colors.black)
+            .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Color.black)
     }
     .padding()
 }
