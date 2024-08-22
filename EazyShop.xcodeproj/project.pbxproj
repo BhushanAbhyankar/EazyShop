@@ -10,7 +10,6 @@
 		021D6A2B2C6E929D00ADCD5A /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = 021D6A2A2C6E929D00ADCD5A /* FacebookBasics */; };
 		021D6A2E2C6F1F3C00ADCD5A /* FirebaseErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D6A2D2C6F1F3C00ADCD5A /* FirebaseErrorManager.swift */; };
 		022487862C66D1C500180539 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022487852C66D1C500180539 /* HomeView.swift */; };
-		0262DF3A2C61595600689E1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0262DF392C61595600689E1A /* Constants.swift */; };
 		0262DF3D2C618ED600689E1A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0262DF3C2C618ED500689E1A /* LoginViewModel.swift */; };
 		028C99AA2C6E86A900EC8B0A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 028C99A92C6E86A900EC8B0A /* FirebaseAuth */; };
 		028C99AC2C6E86A900EC8B0A /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 028C99AB2C6E86A900EC8B0A /* FirebaseCrashlytics */; };
@@ -92,7 +91,6 @@
 		021D6A2D2C6F1F3C00ADCD5A /* FirebaseErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseErrorManager.swift; sourceTree = "<group>"; };
 		022487842C66658B00180539 /* EazyShop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EazyShop.entitlements; sourceTree = "<group>"; };
 		022487852C66D1C500180539 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		0262DF392C61595600689E1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0262DF3C2C618ED500689E1A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		02C3522F2C65F90B0024AF14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02C352332C65FA8C0024AF14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -213,6 +211,7 @@
 				F12EAAA92C777A0E00FCC0D4 /* Images */,
 				F12EAAA82C7779FD00FCC0D4 /* Fonts */,
 				F1984D522C739296008E7B29 /* Colors */,
+				02ECEA922C5AFDCD00B62A2A /* Utils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -279,24 +278,14 @@
 			isa = PBXGroup;
 			children = (
 				F1984D552C73937E008E7B29 /* Views */,
-				022487842C66658B00180539 /* EazyShop.entitlements */,
-				02ECEA8F2C5AE9FF00B62A2A /* Info.plist */,
 				02ECEA672C5AE9A100B62A2A /* Utilities */,
 				0262DF3B2C618E9E00689E1A /* ViewModel */,
 				021D6A2C2C6F1F2000ADCD5A /* Services */,
-				8BD311A02C5ACBF30013A159 /* EazyShopApp.swift */,
 				8BD311A22C5ACBF30013A159 /* ContentView.swift */,
-				0262DF392C61595600689E1A /* Constants.swift */,
-				02ECEA982C5B13BA00B62A2A /* ESNav.swift */,
-				02ECEA632C5AE82A00B62A2A /* SignUpPage.swift */,
-				02ECEA962C5B094700B62A2A /* LoginPage.swift */,
-				02ECEA9A2C5B73EB00B62A2A /* ForgotPasswordPage.swift */,
-				022487852C66D1C500180539 /* HomeView.swift */,
 				8BD311A42C5ACBF30013A159 /* Item.swift */,
-				02ECEA942C5AFEB700B62A2A /* ESButton.swift */,
-				02ECEA902C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift */,
-				02ECEA922C5AFDCD00B62A2A /* Utils.swift */,
+				022487842C66658B00180539 /* EazyShop.entitlements */,
 				02C352332C65FA8C0024AF14 /* GoogleService-Info.plist */,
+				02ECEA8F2C5AE9FF00B62A2A /* Info.plist */,
 				8BD311A62C5ACBFD0013A159 /* Assets.xcassets */,
 				8BD311A82C5ACBFD0013A159 /* Preview Content */,
 			);
@@ -369,6 +358,32 @@
 			path = Texts;
 			sourceTree = "<group>";
 		};
+		F12EAAB72C77903F00FCC0D4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				02ECEA9A2C5B73EB00B62A2A /* ForgotPasswordPage.swift */,
+				02ECEA962C5B094700B62A2A /* LoginPage.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F12EAAB82C77906500FCC0D4 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				02ECEA632C5AE82A00B62A2A /* SignUpPage.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		F12EAAB92C77911A00FCC0D4 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				02ECEA942C5AFEB700B62A2A /* ESButton.swift */,
+				02ECEA902C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		F1984D522C739296008E7B29 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,12 +395,18 @@
 		F1984D552C73937E008E7B29 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F12EAAB92C77911A00FCC0D4 /* Buttons */,
+				F12EAAB82C77906500FCC0D4 /* SignUp */,
+				F12EAAB72C77903F00FCC0D4 /* Login */,
 				F1984D5A2C73949E008E7B29 /* Shop */,
 				F1984D592C7393C3008E7B29 /* Profiles */,
 				F1984D582C7393AC008E7B29 /* Home */,
 				F1984D572C73938D008E7B29 /* Favorites */,
 				F1984D562C739386008E7B29 /* Cart */,
 				F1984D5B2C739519008E7B29 /* EazyShopTabView.swift */,
+				8BD311A02C5ACBF30013A159 /* EazyShopApp.swift */,
+				02ECEA982C5B13BA00B62A2A /* ESNav.swift */,
+				022487852C66D1C500180539 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -598,7 +619,6 @@
 			files = (
 				F1984D642C739612008E7B29 /* FavoritesView.swift in Sources */,
 				02ECEA9B2C5B73EB00B62A2A /* ForgotPasswordPage.swift in Sources */,
-				0262DF3A2C61595600689E1A /* Constants.swift in Sources */,
 				02ECEA972C5B094700B62A2A /* LoginPage.swift in Sources */,
 				F12EAAB02C777A9500FCC0D4 /* TitleConstants.swift in Sources */,
 				022487862C66D1C500180539 /* HomeView.swift in Sources */,
