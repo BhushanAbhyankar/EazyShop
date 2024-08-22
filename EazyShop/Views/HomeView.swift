@@ -12,16 +12,16 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
-            Constants.Colors.backgroundLightGray
+            Color.backgroundLightGray
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
                 Text("WELCOME TO")
-                    .fontMetropolis(fontSize: 35, fontWeight: .bold, fontColor: Constants.Colors.black)
+                    .fontMetropolis(fontSize: 35, fontWeight: .bold, fontColor: Color.black)
                 Text("EazyShop")
-                    .fontMetropolis(fontSize: 70, fontWeight: .bold, fontColor: Constants.Colors.red)
+                    .fontMetropolis(fontSize: 70, fontWeight: .bold, fontColor: Color.red)
             }
-            .background(Constants.Colors.backgroundLightGray)
+            .background(Color.backgroundLightGray)
         }
     }
 }

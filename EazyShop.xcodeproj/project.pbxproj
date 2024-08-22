@@ -10,7 +10,6 @@
 		021D6A2B2C6E929D00ADCD5A /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = 021D6A2A2C6E929D00ADCD5A /* FacebookBasics */; };
 		021D6A2E2C6F1F3C00ADCD5A /* FirebaseErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D6A2D2C6F1F3C00ADCD5A /* FirebaseErrorManager.swift */; };
 		022487862C66D1C500180539 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022487852C66D1C500180539 /* HomeView.swift */; };
-		0262DF3A2C61595600689E1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0262DF392C61595600689E1A /* Constants.swift */; };
 		0262DF3D2C618ED600689E1A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0262DF3C2C618ED500689E1A /* LoginViewModel.swift */; };
 		028C99AA2C6E86A900EC8B0A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 028C99A92C6E86A900EC8B0A /* FirebaseAuth */; };
 		028C99AC2C6E86A900EC8B0A /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 028C99AB2C6E86A900EC8B0A /* FirebaseCrashlytics */; };
@@ -57,6 +56,11 @@
 		8BD311B42C5ACBFF0013A159 /* EazyShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311B32C5ACBFF0013A159 /* EazyShopTests.swift */; };
 		8BD311BE2C5ACBFF0013A159 /* EazyShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311BD2C5ACBFF0013A159 /* EazyShopUITests.swift */; };
 		8BD311C02C5ACBFF0013A159 /* EazyShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD311BF2C5ACBFF0013A159 /* EazyShopUITestsLaunchTests.swift */; };
+		F12EAAAE2C777A5C00FCC0D4 /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EAAAD2C777A5C00FCC0D4 /* TextConstants.swift */; };
+		F12EAAB02C777A9500FCC0D4 /* TitleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EAAAF2C777A9500FCC0D4 /* TitleConstants.swift */; };
+		F12EAAB22C777AC600FCC0D4 /* ButtonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EAAB12C777AC600FCC0D4 /* ButtonConstants.swift */; };
+		F12EAAB42C777AE100FCC0D4 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EAAB32C777AE100FCC0D4 /* FontConstants.swift */; };
+		F12EAAB62C777AFD00FCC0D4 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EAAB52C777AFD00FCC0D4 /* ImageConstants.swift */; };
 		F1984D542C7392CB008E7B29 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1984D532C7392CB008E7B29 /* Color.swift */; };
 		F1984D5C2C739519008E7B29 /* EazyShopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1984D5B2C739519008E7B29 /* EazyShopTabView.swift */; };
 		F1984D5E2C739569008E7B29 /* ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1984D5D2C739569008E7B29 /* ShoppingView.swift */; };
@@ -87,7 +91,6 @@
 		021D6A2D2C6F1F3C00ADCD5A /* FirebaseErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseErrorManager.swift; sourceTree = "<group>"; };
 		022487842C66658B00180539 /* EazyShop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EazyShop.entitlements; sourceTree = "<group>"; };
 		022487852C66D1C500180539 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		0262DF392C61595600689E1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0262DF3C2C618ED500689E1A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		02C3522F2C65F90B0024AF14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02C352332C65FA8C0024AF14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -133,6 +136,11 @@
 		8BD311BF2C5ACBFF0013A159 /* EazyShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazyShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8C528D551B92CDC2D1FB95A1 /* Pods_EazyShop_EazyShopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EazyShop_EazyShopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8586A6771E1079CAAF85630 /* Pods_EazyShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EazyShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12EAAAD2C777A5C00FCC0D4 /* TextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstants.swift; sourceTree = "<group>"; };
+		F12EAAAF2C777A9500FCC0D4 /* TitleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleConstants.swift; sourceTree = "<group>"; };
+		F12EAAB12C777AC600FCC0D4 /* ButtonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonConstants.swift; sourceTree = "<group>"; };
+		F12EAAB32C777AE100FCC0D4 /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
+		F12EAAB52C777AFD00FCC0D4 /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 		F1984D532C7392CB008E7B29 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F1984D5B2C739519008E7B29 /* EazyShopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazyShopTabView.swift; sourceTree = "<group>"; };
 		F1984D5D2C739569008E7B29 /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingView.swift; sourceTree = "<group>"; };
@@ -197,8 +205,13 @@
 		02ECEA672C5AE9A100B62A2A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F12EAAAC2C777A3D00FCC0D4 /* Texts */,
+				F12EAAAB2C777A2D00FCC0D4 /* Titles */,
+				F12EAAAA2C777A2500FCC0D4 /* Buttons */,
+				F12EAAA92C777A0E00FCC0D4 /* Images */,
+				F12EAAA82C7779FD00FCC0D4 /* Fonts */,
 				F1984D522C739296008E7B29 /* Colors */,
-				02ECEA7B2C5AE9BF00B62A2A /* metropolis-font */,
+				02ECEA922C5AFDCD00B62A2A /* Utils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -226,7 +239,8 @@
 				02ECEA792C5AE9BF00B62A2A /* Metropolis-ThinItalic.otf */,
 				02ECEA7A2C5AE9BF00B62A2A /* SIL Open Font License.txt */,
 			);
-			path = "metropolis-font";
+			name = "metropolis-font";
+			path = "EazyShop/Utilities/Fonts/metropolis-font";
 			sourceTree = SOURCE_ROOT;
 		};
 		5E39265F4AAFC08886CA228D /* Frameworks */ = {
@@ -264,24 +278,14 @@
 			isa = PBXGroup;
 			children = (
 				F1984D552C73937E008E7B29 /* Views */,
-				022487842C66658B00180539 /* EazyShop.entitlements */,
-				02ECEA8F2C5AE9FF00B62A2A /* Info.plist */,
 				02ECEA672C5AE9A100B62A2A /* Utilities */,
 				0262DF3B2C618E9E00689E1A /* ViewModel */,
 				021D6A2C2C6F1F2000ADCD5A /* Services */,
-				8BD311A02C5ACBF30013A159 /* EazyShopApp.swift */,
 				8BD311A22C5ACBF30013A159 /* ContentView.swift */,
-				0262DF392C61595600689E1A /* Constants.swift */,
-				02ECEA982C5B13BA00B62A2A /* ESNav.swift */,
-				02ECEA632C5AE82A00B62A2A /* SignUpPage.swift */,
-				02ECEA962C5B094700B62A2A /* LoginPage.swift */,
-				02ECEA9A2C5B73EB00B62A2A /* ForgotPasswordPage.swift */,
-				022487852C66D1C500180539 /* HomeView.swift */,
 				8BD311A42C5ACBF30013A159 /* Item.swift */,
-				02ECEA942C5AFEB700B62A2A /* ESButton.swift */,
-				02ECEA902C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift */,
-				02ECEA922C5AFDCD00B62A2A /* Utils.swift */,
+				022487842C66658B00180539 /* EazyShop.entitlements */,
 				02C352332C65FA8C0024AF14 /* GoogleService-Info.plist */,
+				02ECEA8F2C5AE9FF00B62A2A /* Info.plist */,
 				8BD311A62C5ACBFD0013A159 /* Assets.xcassets */,
 				8BD311A82C5ACBFD0013A159 /* Preview Content */,
 			);
@@ -313,6 +317,73 @@
 			path = EazyShopUITests;
 			sourceTree = "<group>";
 		};
+		F12EAAA82C7779FD00FCC0D4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				02ECEA7B2C5AE9BF00B62A2A /* metropolis-font */,
+				F12EAAB32C777AE100FCC0D4 /* FontConstants.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F12EAAA92C777A0E00FCC0D4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F12EAAB52C777AFD00FCC0D4 /* ImageConstants.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		F12EAAAA2C777A2500FCC0D4 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				F12EAAB12C777AC600FCC0D4 /* ButtonConstants.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		F12EAAAB2C777A2D00FCC0D4 /* Titles */ = {
+			isa = PBXGroup;
+			children = (
+				F12EAAAF2C777A9500FCC0D4 /* TitleConstants.swift */,
+			);
+			path = Titles;
+			sourceTree = "<group>";
+		};
+		F12EAAAC2C777A3D00FCC0D4 /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+				F12EAAAD2C777A5C00FCC0D4 /* TextConstants.swift */,
+			);
+			path = Texts;
+			sourceTree = "<group>";
+		};
+		F12EAAB72C77903F00FCC0D4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				02ECEA9A2C5B73EB00B62A2A /* ForgotPasswordPage.swift */,
+				02ECEA962C5B094700B62A2A /* LoginPage.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F12EAAB82C77906500FCC0D4 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				02ECEA632C5AE82A00B62A2A /* SignUpPage.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		F12EAAB92C77911A00FCC0D4 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				02ECEA942C5AFEB700B62A2A /* ESButton.swift */,
+				02ECEA902C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		F1984D522C739296008E7B29 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,12 +395,18 @@
 		F1984D552C73937E008E7B29 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F12EAAB92C77911A00FCC0D4 /* Buttons */,
+				F12EAAB82C77906500FCC0D4 /* SignUp */,
+				F12EAAB72C77903F00FCC0D4 /* Login */,
 				F1984D5A2C73949E008E7B29 /* Shop */,
 				F1984D592C7393C3008E7B29 /* Profiles */,
 				F1984D582C7393AC008E7B29 /* Home */,
 				F1984D572C73938D008E7B29 /* Favorites */,
 				F1984D562C739386008E7B29 /* Cart */,
 				F1984D5B2C739519008E7B29 /* EazyShopTabView.swift */,
+				8BD311A02C5ACBF30013A159 /* EazyShopApp.swift */,
+				02ECEA982C5B13BA00B62A2A /* ESNav.swift */,
+				022487852C66D1C500180539 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -542,14 +619,16 @@
 			files = (
 				F1984D642C739612008E7B29 /* FavoritesView.swift in Sources */,
 				02ECEA9B2C5B73EB00B62A2A /* ForgotPasswordPage.swift in Sources */,
-				0262DF3A2C61595600689E1A /* Constants.swift in Sources */,
 				02ECEA972C5B094700B62A2A /* LoginPage.swift in Sources */,
+				F12EAAB02C777A9500FCC0D4 /* TitleConstants.swift in Sources */,
 				022487862C66D1C500180539 /* HomeView.swift in Sources */,
 				F1984D662C73967C008E7B29 /* CartView.swift in Sources */,
 				F1984D542C7392CB008E7B29 /* Color.swift in Sources */,
 				02ECEA952C5AFEB700B62A2A /* ESButton.swift in Sources */,
 				02C352302C65F90B0024AF14 /* AppDelegate.swift in Sources */,
 				F1984D622C7395CB008E7B29 /* EazyShopHomeView.swift in Sources */,
+				F12EAAB22C777AC600FCC0D4 /* ButtonConstants.swift in Sources */,
+				F12EAAAE2C777A5C00FCC0D4 /* TextConstants.swift in Sources */,
 				8BD311A32C5ACBF30013A159 /* ContentView.swift in Sources */,
 				8BD311A52C5ACBF30013A159 /* Item.swift in Sources */,
 				02ECEA642C5AE82A00B62A2A /* SignUpPage.swift in Sources */,
@@ -558,8 +637,10 @@
 				F1984D602C739586008E7B29 /* ProfileView.swift in Sources */,
 				02ECEA992C5B13BA00B62A2A /* ESNav.swift in Sources */,
 				021D6A2E2C6F1F3C00ADCD5A /* FirebaseErrorManager.swift in Sources */,
+				F12EAAB62C777AFD00FCC0D4 /* ImageConstants.swift in Sources */,
 				0262DF3D2C618ED600689E1A /* LoginViewModel.swift in Sources */,
 				02ECEA912C5AF9D900B62A2A /* BaseButtonAndTextStyle.swift in Sources */,
+				F12EAAB42C777AE100FCC0D4 /* FontConstants.swift in Sources */,
 				F1984D5C2C739519008E7B29 /* EazyShopTabView.swift in Sources */,
 				8BD311A12C5ACBF30013A159 /* EazyShopApp.swift in Sources */,
 				02ECEA932C5AFDCD00B62A2A /* Utils.swift in Sources */,

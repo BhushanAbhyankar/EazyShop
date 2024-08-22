@@ -16,26 +16,26 @@ struct ForgotPasswordPage: View {
         ScrollView {
             VStack(spacing: 16) {
                 // Title
-                Text(Constants.Titles.forgotPassword)
-                    .fontMetropolis(fontSize: 34, fontWeight: .bold, fontColor: Constants.Colors.black)
+                Text(TitleConstants.forgotPassword)
+                    .fontMetropolis(fontSize: 34, fontWeight: .bold, fontColor: Color.black)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 53)
                 
                 HStack {
-                    Text(Constants.Text.newPassword)
-                        .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Constants.Colors.black)
+                    Text(TextConstants.newPassword)
+                        .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Color.black)
                     Spacer()
                 }
                 
                 VStack {
                     VStack(alignment: .leading) {
-                        Text(Constants.Text.email)
-                            .fontMetropolis(fontSize: 11, fontWeight: .regular, fontColor: Constants.Colors.lightGray)
+                        Text(TextConstants.email)
+                            .fontMetropolis(fontSize: 11, fontWeight: .regular, fontColor: Color.lightGray)
                             .padding(.leading, 10)
                         HStack {
                             // Email Field
                             TextField("", text: $viewModel.email)
-                                .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Constants.Colors.blackTextField)
+                                .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Color.blackTextField)
                                 .padding(.leading, 10)
                                 .autocapitalization(.none) // Deactivate automatic capitalized
                                 .keyboardType(.emailAddress) // Keyboard for mail address
@@ -62,7 +62,7 @@ struct ForgotPasswordPage: View {
 //                }
                 
                 // Sign Up Button
-                ESButton(Constants.Buttons.send) {
+                ESButton(ButtonConstants.send) {
                     viewModel.resetPassword { result in
                         switch result {
                         case .success:
@@ -82,7 +82,7 @@ struct ForgotPasswordPage: View {
         }
         .padding()
         .padding(.top, 18)
-        .background(Constants.Colors.backgroundLightGray)
+        .background(Color.backgroundLightGray)
         .alert(isPresented: $viewModel.showResetAlert) {
                     Alert(
                         title: Text("Password reset"),

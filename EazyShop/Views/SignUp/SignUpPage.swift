@@ -18,20 +18,20 @@ struct SignUpPage: View {
         ScrollView {
             VStack(spacing: 20) {
                 // Title
-                Text(Constants.Titles.signUpPage)
-                    .fontMetropolis(fontSize: 34, fontWeight: .bold, fontColor: Constants.Colors.black)
+                Text(TitleConstants.signUpPage)
+                    .fontMetropolis(fontSize: 34, fontWeight: .bold, fontColor: Color.black)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 53)
                 
                 VStack {
                     VStack(alignment: .leading) {
-                        Text(Constants.Text.name)
-                            .fontMetropolis(fontSize: 11, fontWeight: .regular, fontColor: Constants.Colors.lightGray)
+                        Text(TextConstants.name)
+                            .fontMetropolis(fontSize: 11, fontWeight: .regular, fontColor: Color.lightGray)
                             .padding(.leading, 10)
                         HStack {
                             // Name Field
                             TextField("", text: $viewModel.name)
-                                .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Constants.Colors.lightGray)
+                                .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Color.lightGray)
                                 .padding(.leading, 10)
                             
                             viewModel.nameCheckImage
@@ -43,13 +43,13 @@ struct SignUpPage: View {
                     .shadow(color: Color.gray.opacity(0.5), radius: 2, x: 0, y: 0)
                     
                     VStack(alignment: .leading) {
-                        Text(Constants.Text.email)
-                            .fontMetropolis(fontSize: 11, fontWeight: .regular, fontColor: Constants.Colors.lightGray)
+                        Text(TextConstants.email)
+                            .fontMetropolis(fontSize: 11, fontWeight: .regular, fontColor: Color.lightGray)
                             .padding(.leading, 10)
                         HStack {
                             // Email Field
                             TextField("", text: $viewModel.email)
-                                .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Constants.Colors.blackTextField)
+                                .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Color.blackTextField)
                                 .padding(.leading, 10)
                                 .autocapitalization(.none) // Deactivate automatic capitalized
                                 .keyboardType(.emailAddress) // Keyboard for mail address
@@ -69,13 +69,13 @@ struct SignUpPage: View {
                     viewModel.errorText
                     
                     VStack(alignment: .leading) {
-                        Text(Constants.Text.password)
-                            .fontMetropolis(fontSize: 11, fontWeight: .regular, fontColor: Constants.Colors.lightGray)
+                        Text(TextConstants.password)
+                            .fontMetropolis(fontSize: 11, fontWeight: .regular, fontColor: Color.lightGray)
                             .padding(.leading, 10)
                         HStack {
                             // Password Field
                             SecureField("", text: $viewModel.password)
-                                .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Constants.Colors.blackTextField)
+                                .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Color.blackTextField)
                                 .padding(.leading, 10)
                         }
                     }
@@ -88,13 +88,13 @@ struct SignUpPage: View {
                 // Already have an account
                 HStack {
                     Spacer()
-                    Text(Constants.Text.alreadyHaveAnAccount)
-                        .fontMetropolis(fontSize: 14, fontWeight: .bold, fontColor: Constants.Colors.black)
+                    Text(TextConstants.alreadyHaveAnAccount)
+                        .fontMetropolis(fontSize: 14, fontWeight: .bold, fontColor: Color.black)
                     
                     Button(action: {
                         path.append(.LoginPage)
                     }, label: {
-                        Image(Constants.Images.rightArrow)
+                        Image(ImageConstants.rightArrow)
                             .foregroundColor(.red)
                     })
                     
@@ -108,7 +108,7 @@ struct SignUpPage: View {
                 //                }
                 
                 // Sign Up Button
-                ESButton(Constants.Buttons.signUp) {
+                ESButton(ButtonConstants.signUp) {
                     viewModel.signUp { result in
                         switch result {
                         case .success:
@@ -131,8 +131,8 @@ struct SignUpPage: View {
                 Spacer()
                 
                 // Or sign up with social account
-                Text(Constants.Text.signUpSocials)
-                    .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Constants.Colors.black)
+                Text(TextConstants.signUpSocials)
+                    .fontMetropolis(fontSize: 14, fontWeight: .regular, fontColor: Color.black)
                     .padding(.top)
                 
                 // Social Buttons
@@ -141,9 +141,9 @@ struct SignUpPage: View {
                         // Google sign up
                         viewModel.signInWithGoogle()
                     }) {
-                        Image(Constants.Images.google)
+                        Image(ImageConstants.google)
                             .frame(width: 92, height: 64)
-                            .background(Constants.Colors.white)
+                            .background(Color.white)
                             .cornerRadius(24)
                     }
                     
@@ -151,9 +151,9 @@ struct SignUpPage: View {
                         // Facebook sign up
                         viewModel.signInWithFacebook()
                     }) {
-                        Image(Constants.Images.facebook)
+                        Image(ImageConstants.facebook)
                             .frame(width: 92, height: 64)
-                            .background(Constants.Colors.white)
+                            .background(Color.white)
                             .cornerRadius(24)
                     }
                 }
@@ -162,7 +162,7 @@ struct SignUpPage: View {
         }
         .padding()
         .padding(.top, 18)
-        .background(Constants.Colors.backgroundLightGray)
+        .background(Color.backgroundLightGray)
         .alert(isPresented: $viewModel.showAlert) {
             Alert(
                 title: Text("Sign up"),

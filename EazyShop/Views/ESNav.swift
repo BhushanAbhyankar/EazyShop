@@ -23,10 +23,10 @@ struct ESNav: View {
     var body: some View {
             NavigationStack(path: $path) {
                 ZStack {
-                    Constants.Colors.backgroundLightGray
+                    Color.backgroundLightGray
                         .edgesIgnoringSafeArea(.all)
                 HStack {
-                    Button(Constants.Buttons.login) {
+                    Button(ButtonConstants.login) {
                         path.append(.SignUpPage)
                     }
                     .buttonStyle(OutlineStyle())
