@@ -213,7 +213,6 @@
 				F12EAAA92C777A0E00FCC0D4 /* Images */,
 				F12EAAA82C7779FD00FCC0D4 /* Fonts */,
 				F1984D522C739296008E7B29 /* Colors */,
-				02ECEA7B2C5AE9BF00B62A2A /* metropolis-font */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -241,7 +240,8 @@
 				02ECEA792C5AE9BF00B62A2A /* Metropolis-ThinItalic.otf */,
 				02ECEA7A2C5AE9BF00B62A2A /* SIL Open Font License.txt */,
 			);
-			path = "metropolis-font";
+			name = "metropolis-font";
+			path = "EazyShop/Utilities/Fonts/metropolis-font";
 			sourceTree = SOURCE_ROOT;
 		};
 		5E39265F4AAFC08886CA228D /* Frameworks */ = {
@@ -331,6 +331,7 @@
 		F12EAAA82C7779FD00FCC0D4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				02ECEA7B2C5AE9BF00B62A2A /* metropolis-font */,
 				F12EAAB32C777AE100FCC0D4 /* FontConstants.swift */,
 			);
 			path = Fonts;
