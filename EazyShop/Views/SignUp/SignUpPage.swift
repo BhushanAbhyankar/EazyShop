@@ -18,7 +18,7 @@ struct SignUpPage: View {
         ScrollView {
             VStack(spacing: 20) {
                 // Title
-                Text(TitleConstants.signUpPage)
+                Text(TextConstants.signUpPage)
                     .fontMetropolis(fontSize: 34, fontWeight: .bold, fontColor: Color.black)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 53)

@@ -16,7 +16,7 @@ struct ForgotPasswordPage: View {
         ScrollView {
             VStack(spacing: 16) {
                 // Title
-                Text(TitleConstants.forgotPassword)
+                Text(TextConstants.forgotPassword)
                     .fontMetropolis(fontSize: 34, fontWeight: .bold, fontColor: Color.black)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 53)

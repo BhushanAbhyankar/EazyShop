@@ -18,7 +18,7 @@ struct LoginPage: View {
         ScrollView {
             VStack(spacing: 20) {
                 // Title
-                Text(TitleConstants.loginPage)
+                Text(TextConstants.loginPage)
                     .fontMetropolis(fontSize: 34, fontWeight: .bold, fontColor: Color.black)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 53)
@@ -69,7 +69,7 @@ struct LoginPage: View {
                 // Forgot your password?
                 HStack {
                     Spacer()
-                    Text(TextConstants.forgotPassword)
+                    Text(TextConstants.forgotYourPassword)
                         .fontMetropolis(fontSize: 14, fontWeight: .bold, fontColor: Color.black)
                     
                     Button(action: {

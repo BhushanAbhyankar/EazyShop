@@ -54,7 +54,7 @@ struct EazyShopTabView: View {
                     UITabBar.appearance().unselectedItemTintColor = .systemGray
                     //3
                     UITabBarItem.appearance().badgeColor = UIColor(Color.red)
-//                    UITabBarItem.appearance().badgeColor = .systemPink
+//                    UITabBarItem.appearance().badgeColor = /Users/ebillsonjean/Desktop/Projects/ShoppingAppProject/EazyShop/EazyShop/Views/EazyShopTabView.swift.systemPink
                     //4
                     UITabBar.appearance().backgroundColor = .systemGray4.withAlphaComponent(0.4)
                     //5
